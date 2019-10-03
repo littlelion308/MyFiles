@@ -198,6 +198,8 @@ mode "starting" {
 	bindsym $mod+m exec minetest
 	# Use $mod+r to start ranger
 	bindsym $mod+a exec atom
+	# Use $mod+s to start supertuxkart
+	bindsym $mod+s exce supertuxkart
 
 	# Return to normal
 	bindsym $mod+Escape mode "default"
