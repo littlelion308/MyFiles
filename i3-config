@@ -202,6 +202,8 @@ mode "starting" {
 	bindsym $mod+s exec supertuxkart
 	# Use $mod+l to start LMMS
 	bindsym $mod+l exec lmms
+	# Use $mod+b to start gnome-boxes
+	bindsym $mod+b exec gnome-boxes	
 
 	# Return to normal
 	bindsym $mod+Escape mode "default"
