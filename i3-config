@@ -205,7 +205,7 @@ mode "starting" {
 	# Use $mod+b to start gnome-boxes
 	bindsym $mod+b exec gnome-boxes	
 	# Use $mod+u to start lutris
-	bindsym $mod+u exce lutris
+	bindsym $mod+u exec lutris
 
 	# Return to normal
 	bindsym $mod+Escape mode "default"
