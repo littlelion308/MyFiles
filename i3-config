@@ -193,7 +193,7 @@ exec_always dropbox
 
 mode "starting" {
 	# Use $mod+f to start firefox
-	bindsym $mod+f exec firefox https://duckduckgo.com/
+	bindsym $mod+f exec falkon
 	# Use $mod+m to start minetest
 	#bindsym $mod+m exec minetest
 	# Use $mod+r to start ranger
