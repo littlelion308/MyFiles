@@ -223,8 +223,5 @@ bindsym $mod+Control+Shift+s exec shutdown 0
 # Resetting background
 exec feh --bg-scale ~/.stuff/Background.png
 
-# Staring hud autostart 
-exec /home/christoph/SourceCode/Git-hud-menu/hud-menu/hud-menu-service.py
-
-# Adding hud Hotkey
-bindsym $mod+x exec echo test
+# Auto Update on restart
+exec_always pacman -Syu
