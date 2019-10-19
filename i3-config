@@ -159,10 +159,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+        bindsym $Left resize shrink width 10 px or 10 ppt
+        bindsym $Down resize grow height 10 px or 10 ppt
+        bindsym $Up resize shrink height 10 px or 10 ppt
+        bindsym $Right resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -192,14 +192,8 @@ bar {
 exec_always dropbox
 
 mode "starting" {
-	# Use $mod+f to start firefox
+	# Use $mod+f to start falkon
 	bindsym $mod+f exec falkon
-	# Use $mod+m to start minetest
-	#bindsym $mod+m exec minetest
-	# Use $mod+r to start ranger
-	bindsym $mod+a exec atom
-	# Use $mod+s to start supertuxkart
-	#bindsym $mod+s exec supertuxkart
 	# Use $mod+l to start LMMS
 	bindsym $mod+l exec lmms
 	# Use $mod+b to start gnome-boxes
@@ -222,6 +216,3 @@ bindsym $mod+Control+Shift+s exec shutdown 0
 
 # Resetting background
 exec feh --bg-scale ~/.stuff/Background.png
-
-# Auto Update on restart
-exec_always pacman -Syu
