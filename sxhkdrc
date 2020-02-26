@@ -7,7 +7,7 @@ super + Return
 
 # program launcher
 super + d
- 	dmenu_run
+ 	j4-dmenu-desktop
 
 # make sxhkd reload its configuration files:
 super + shift + t
@@ -15,14 +15,15 @@ super + shift + t
 
 # start falkon 
 super + shift + f 
- 	falkon
+ 	firefox
 
 XF86AudioRaiseVolume 
  	amixer sset Master 10%+
 XF86AudioLowerVolume
  	amixer sset Master 10%-
 XF86AudioMute 
- 	amixer sset Master toggle
+	sh ~/.alsascri.sh toggle
+
 
 
 #
@@ -38,9 +39,9 @@ super + shift + r
 
 # close and kill
 super + shift + ctrl + q 
-	bspc node -k
+ 	xdo kill
 super + shift + q
- 	bspc node -c
+ 	xdo close
 
 
 # alternate between the tiled and monocle layout

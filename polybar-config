@@ -50,7 +50,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 bspwm xwindow
-modules-right =  wlanip wlan eth alsa memory cpu mydate powermenu 
+modules-right =  wlanip wlan eth alsa pulsaudio memory cpu mydate powermenu 
 
 tray-padding = 2
 tray-position = right
