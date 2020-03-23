@@ -3,7 +3,8 @@
 
 # terminal emulator
 super + Return
- 	sakura
+	st
+
 
 # program launcher
 super + d
@@ -22,8 +23,7 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
  	amixer sset Master 10%-
 XF86AudioMute 
-	sh ~/.alsascri.sh toggle
-
+	pulseaudio-ctl mute
 
 
 #

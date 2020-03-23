@@ -2,22 +2,38 @@
 
 sxhkd &
 feh --bg-scale Downloads/Background.png &
-polybar mybar &
 dunst &
-pulseaudio &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2 
-bspc config window_gap           4
-
-bspc config split_ratio          0.52
+bspc config window_gap           3
+bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config top_paddig 0
- 
-bspc config urgent_border_color "#9e0909"
-
+bspc config urgent_border_color "#FF0000"
 bspc config left_padding 2
 bspc config right padding 2
 bspc config bottom_padding 2
+
+
+setxkbmap -layout "us" -variant "intl_nodeadkeys"
+polybar mybar&
+
+sleep 1s
+
+pasystray &
+
+bspc config top_paddig 29
+
+
+
+##############################################################
+########################## Autostart #########################
+##############################################################
+bspc desktop -f ^10
+teams &
+bspc desktop -l next
+evolution &
+sleep 10s
+bspc desktop -f ^1
