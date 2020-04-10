@@ -1,39 +1,54 @@
 #! /bin/sh
-
+# _
+#| |__  ___ _ ____      ___ __ ___  _ __ ___
+#| '_ \/ __| '_ \ \ /\ / / '_ ` _ \| '__/ __|
+#| |_) \__ \ |_) \ V  V /| | | | | | | | (__
+#|_.__/|___/ .__/ \_/\_/ |_| |_| |_|_|  \___|
+#          |_|
+# start the hotkey deamon 
 sxhkd &
+# set the background
 feh --bg-scale Downloads/Background.png &
+# start the notifikation manager
 dunst &
-
+# set the virtual desktop 
 bspc monitor -d I II III IV V VI VII VIII IX X
-
+# set the border width to 2
 bspc config border_width         2 
+# set the gap between the borders
 bspc config window_gap           3
+# set the split ratio to 0.5
 bspc config split_ratio          0.5
+# enable borderless monocle
 bspc config borderless_monocle   true
+# enable gapless monocle
 bspc config gapless_monocle      true
+# set the urgent border color to red
 bspc config urgent_border_color "#FF0000"
+# set the gaps around the left, right and bottom to 2
 bspc config left_padding 2
 bspc config right padding 2
 bspc config bottom_padding 2
-
-
+# enable dead keys
 setxkbmap -layout "us" -variant "intl_nodeadkeys"
+# change layout on desktop 10
+bspc desktop -f '^10'
+bspc desktop -l next
+bspc desktop -f '^1'
+# star polybar
 polybar mybar&
-
+# wait a seck
 sleep 1s
-
+# start pasystray
 pasystray &
-
+# set the gaps around the top to 29
 bspc config top_paddig 29
-
-
-
 ##############################################################
 ########################## Autostart #########################
 ##############################################################
-bspc desktop -f ^10
-teams &
-bspc desktop -l next
+bspc rule -a Evolution:evolution desktop=^10
+bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop=^10
+#teams &
 evolution &
-sleep 10s
-bspc desktop -f ^1
+rm ~/.fehbg
+sleep 37s
