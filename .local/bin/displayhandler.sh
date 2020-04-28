@@ -1,0 +1,1 @@
+/home/christoph/.local/bin/displayhandler.sh

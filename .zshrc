@@ -13,3 +13,6 @@ PATH=$PATH:~/.local/bin/
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+alias alias-name"ls" "ls --color=always"
+export XDG_DATA_HOME=~/.config
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default

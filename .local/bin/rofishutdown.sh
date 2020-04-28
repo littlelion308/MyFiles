@@ -1,0 +1,1 @@
+/home/christoph/.local/bin/rofishutdown.sh

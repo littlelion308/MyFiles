@@ -1,0 +1,1 @@
+/home/christoph/.config/nvim/init.vim
