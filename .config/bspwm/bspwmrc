@@ -2,7 +2,9 @@
 
 sxhkd &
 dunst &
-bspc monitor -d I II III IV V VI VII VIII IX X
+polybar mybar&
+pasystray &
+bspc monitor -d I II III IV V VI VII VIII IX X XI XII
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -10,6 +12,12 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc desktop -f '^12'
+bspc desktop -l next
+st -e calcurse -t calcurse &
+bspc desktop -f '^1'
 
+evolution &
+teams &
 bspc rule -a Evolution desktop='^12'
 bspc rule -a Microsoft\ Teams\ Preview desktop='^12'

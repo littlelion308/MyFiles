@@ -1,0 +1,10 @@
+configuration {
+	modi: [window, run, ssh, windowcd, drun, combi, keys];
+	width: 90;
+	lines: 20;
+	columns: 4;
+	show-icons: true;
+	combi-modi: [drun, ssh, window];
+	theme: "Adapta-Nokto";
+}
+

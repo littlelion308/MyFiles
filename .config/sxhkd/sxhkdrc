@@ -14,6 +14,19 @@ super + d
 super + shift + t
 	pkill -USR1 -x sxhkd
 
+super + shift + f
+	qutebrowser
+
+XF86AudioRaiseVolume
+	pulseaudio-ctl up
+
+XF86AudioLowerVolume
+	pulseaudio-ctl down
+
+XF86AudioMute
+	pulseaudio-ctl mute
+
+
 #
 # bspwm hotkeys
 #
@@ -81,8 +94,8 @@ super + bracket{left,right}
 #	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-9,0,-,=}
+	bspc {desktop -f,node -d} '^{1-9,10,11,12}'
 
 #
 # preselect
