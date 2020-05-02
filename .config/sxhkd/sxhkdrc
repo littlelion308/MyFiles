@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi --show combi
+	rofi -show combi
 
 # make sxhkd reload its configuration files:
 super + shift + t
@@ -26,6 +26,11 @@ XF86AudioLowerVolume
 XF86AudioMute
 	pulseaudio-ctl mute
 
+super + Tab
+	rofi -show window
+
+super + i
+	~/.local/bin/rofiunicode.sh
 
 #
 # bspwm hotkeys
@@ -94,7 +99,7 @@ super + bracket{left,right}
 #	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0,-,=}
+super + {_,shift + }{1-9,0,minus,equal}
 	bspc {desktop -f,node -d} '^{1-9,10,11,12}'
 
 #

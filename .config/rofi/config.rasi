@@ -7,4 +7,3 @@ configuration {
 	combi-modi: [drun, ssh, window];
 	theme: "Adapta-Nokto";
 }
-

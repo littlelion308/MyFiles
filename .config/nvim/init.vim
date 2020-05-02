@@ -26,3 +26,13 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+filetype plugin on
+set ruler
+command Bspwmrc n ~/.config/bspwm/bspwmrc
+command Sxhkdrc n ~/.config/sxhkd/sxhkdrc
+command Vimrc n ~/.config/nvim/init.vim
+command Vifmrc n ~/.config/vifm/vifmrc
+command Rofirc n ~/.config/rofi/config.rasi
+command Dunst n ~/.config/dunst/dunstrc
+command Polybarconfig n ~/.config/polybar/config
+command Zshrc n ~/.zshrc
