@@ -36,3 +36,7 @@ command Rofirc n ~/.config/rofi/config.rasi
 command Dunst n ~/.config/dunst/dunstrc
 command Polybarconfig n ~/.config/polybar/config
 command Zshrc n ~/.zshrc
+command Q q
+command W w
+command Wq wq
+command WQ wq

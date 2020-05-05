@@ -32,6 +32,15 @@ super + Tab
 super + i
 	~/.local/bin/rofiunicode.sh
 
+super + semicolon 
+	st -e vifm
+
+super + apostrophe
+	st -e vi
+
+super + shift + {e,s}
+	~/.local/bin/rofishutdown.sh
+
 #
 # bspwm hotkeys
 #
