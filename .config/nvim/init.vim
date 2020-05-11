@@ -3,6 +3,8 @@ call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -14,8 +16,9 @@ map <Space>e :setlocal spell! spelllang=en_us<CR>
 map <Space>d :setlocal spell! spelllang=de_de<CR>
 set splitbelow splitright
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-autocmd BufWritePost *.ms !groff -ms -T pdf >> %.pdf
+autocmd BufWritePost *.ms !groff -m ms -T pdf > %.pdf
 
+set nocompatible
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :

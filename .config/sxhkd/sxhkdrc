@@ -41,6 +41,25 @@ super + apostrophe
 super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
+super + backslash
+	st -e bc
+
+super + shift + Tab
+	rofi -show windowcd
+
+super + p 
+	~/.local/bin/displyhandler.sh
+
+super + shift + semicolon 
+	st -e htop
+
+super + shift + apostrophe
+	st -e bashtop
+
+XF86Display
+	~/.local/bin/displyhandler.sh
+
+
 #
 # bspwm hotkeys
 #
