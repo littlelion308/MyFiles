@@ -14,17 +14,19 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc desktop -f '^12'
 bspc desktop -l next
-st -e calcurse &
 bspc desktop -f '^1'
 lxpolkit &
 rm ~/.sc_history
 rm ~/.sc-iminfo
 rm ~/.lesshst 
 rm -r ~/.audacity-data
-numlockx on &
+rm ~/.2048
+rm -r ~/.java
+numlockx on
 
 geary &
 teams &
 bspc rule -a Evolution desktop='^12'
 bspc rule -a Geary:geary desktop='^12'
 bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
+st calcurse &

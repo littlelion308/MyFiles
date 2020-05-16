@@ -6,6 +6,8 @@
 super + Return
 	st
 
+super + KP_Enter
+	st
 # program launcher
 super + d
 	rofi -show combi
@@ -59,6 +61,21 @@ super + shift + apostrophe
 XF86Display
 	~/.local/bin/displyhandler.sh
 
+super + shift + backslash
+	st calcurse &
+
+super + w 
+	flameshot gui
+
+Print
+	flameshot gui
+
+super + e
+	~/.local/bin/vidconf.sh
+
+
+
+
 
 #
 # bspwm hotkeys
@@ -70,7 +87,7 @@ super + ctrl + shift + {e,s}
 
 # close and kill
 super + shift {_,ctrl + }q
-	bspc node -{c,k}
+	xdo {close, kill}
 
 # alternate between the tiled and monocle layout
 super + m

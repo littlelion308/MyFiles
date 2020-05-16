@@ -10,7 +10,7 @@ generic-cancel  ESC
 generic-select  SPC 
 generic-credits  @ 
 generic-help  ? 
-generic-quit  q Q 
+generic-quit  q Q Z 
 generic-save  s S ^S 
 generic-reload  R 
 generic-copy  c 
