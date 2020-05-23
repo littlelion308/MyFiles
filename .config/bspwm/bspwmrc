@@ -4,29 +4,28 @@ sxhkd &
 dunst &
 polybar mybar&
 pasystray &
-bspc monitor -d I II III IV V VI VII VIII IX X XI XII
+lxpolkit &
 
+bspc monitor -d I II III IV V VI VII VIII IX X XI XII
 bspc config border_width         2
 bspc config window_gap          12
-
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc desktop -f '^12'
 bspc desktop -l next
 bspc desktop -f '^1'
-lxpolkit &
+numlockx on
+
 rm ~/.sc_history
 rm ~/.sc-iminfo
 rm ~/.lesshst 
 rm -r ~/.audacity-data
 rm ~/.2048
 rm -r ~/.java
-numlockx on
 
 geary &
 teams &
-bspc rule -a Evolution desktop='^12'
 bspc rule -a Geary:geary desktop='^12'
 bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
 st calcurse &

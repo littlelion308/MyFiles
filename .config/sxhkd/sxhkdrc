@@ -73,6 +73,8 @@ Print
 super + e
 	~/.local/bin/vidconf.sh
 
+super + shift + w
+	~/.local/bin/scriptedit.sh
 
 
 

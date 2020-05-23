@@ -3,9 +3,13 @@
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vimwiki/vimwiki'
+
+"Plug 'vimwiki/vimwiki'
+
+
 
 call plug#end()
+
 "
 " Plugin settings
 "
@@ -26,22 +30,29 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-nnoremap <Down> :resize -2<CR>
-nnoremap <Up> :resize +2<CR>
-nnoremap <Left> :vertical resize -2<CR>
-nnoremap <Right> :vertical resize +2<CR>
+"nnoremap <Down> :resize -2<CR>
+"nnoremap <Up> :resize +2<CR>
+"nnoremap <Left> :vertical resize -2<CR>
+"nnoremap <Right> :vertical resize +2<CR>
+nnoremap <C-w><C-h> :vertical resize -2<CR>
+nnoremap <C-w><C-l> :vertical resize +2<CR>
+nnoremap <C-w><C-k> :resize +2<CR>
+nnoremap <C-w><C-j> :resize -2<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
 map <Space>e :setlocal spell! spelllang=en_us<CR>
 map <Space>d :setlocal spell! spelllang=de_de<CR>
 map <Space>f :setlocal spell! spelllang=fr<CR>
-map <Space>a :source ~/.config/nvim/init.vim
+map <Space>a :source ~/.config/nvim/init.vim<CR>
+map <Space>gh :!groff -m ms % -T html > %.html<CR>
 "map <C-]> <C-[>
 "
 " Autocommands
 "
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-autocmd BufWritePost *.ms !groff -m ms -T pdf > %.pdf
+autocmd BufWritePost *.ms !groff -m ms % -T pdf > %.pdf
+autocmd InsertEnter * norm zz
+autocmd BufWritePre * %s/\s\+$//e
 "
 " Status Line
 "
@@ -54,16 +65,6 @@ set statusline+=%=
 set statusline+=\ %l/%L:%c
 set statusline+=\ %p%%
 set statusline+=\ [%n]
-
-
-"
-" General settings
-"
-filetype plugin on
-syntax on
-set encoding=utf-8
-set splitbelow splitright
-set number relativenumber
 "
 " Comands 
 " 
@@ -75,7 +76,21 @@ command Rofirc n ~/.config/rofi/config.rasi
 command Dunst n ~/.config/dunst/dunstrc
 command Polybarconfig n ~/.config/polybar/config
 command Zshrc n ~/.zshrc
+
 command Q q
 command W w
 command Wq wq
 command WQ wq
+"
+" General settings
+"
+filetype plugin on
+syntax on
+set encoding=utf-8
+set splitbelow splitright
+set number relativenumber
+"set relativenumber
+set ignorecase
+set smartcase
+"set termguicolors
+set mouse=a
