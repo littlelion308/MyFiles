@@ -491,3 +491,4 @@ nnoremap <f8> :delete<cr>
 command M move
 command C Copy
 command R rename
+filetype *.zip unzip %c

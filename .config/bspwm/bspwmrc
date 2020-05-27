@@ -19,13 +19,16 @@ numlockx on
 
 rm ~/.sc_history
 rm ~/.sc-iminfo
-rm ~/.lesshst 
+rm ~/.lesshst
 rm -r ~/.audacity-data
 rm ~/.2048
 rm -r ~/.java
+rm -r ~/.npm
 
 geary &
 teams &
 bspc rule -a Geary:geary desktop='^12'
 bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
-st calcurse &
+calcurse --daemon
+st calcurse&
+#st calcurse &
