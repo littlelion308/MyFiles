@@ -1,16 +1,19 @@
-"aa Plugins
+" Plugins
 "
+
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'vimwiki/vimwiki'
 Plug 'ThePrimeagen/vim-be-good'
-"Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'junegunn/limelight.vim'
+
+" Plug 'preservim/nerdtree'
+" Plug 'vimwiki/vimwiki'
 " Plug 'ap/vim-css-color'
+
 call plug#end()
 
 "
@@ -22,9 +25,9 @@ call plug#end()
 set nocompatible
 
 inoremap <silent><expr> <TAB>
-      	\ pumvisible() ? "\<C-n>" :
-      	\ <SID>check_back_space() ? "\<TAB>" :
-      	\ coc#refresh()
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
@@ -51,7 +54,6 @@ function! s:goyo_leave()
   	" colorscheme default
   	Limelight!
   	highlight Comment ctermfg=5
-	highlight StatusLine ctermfg=59
 endfunction
 
 "
@@ -106,10 +108,10 @@ autocmd User GoyoLeave nested call <SID>goyo_leave()
 
 " funktions
 
-" function! StatuslineGit()
-"   	let l:branchname = GitBranch()
-"   	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-" endfunction
+"function! StatuslineGit()
+"  	let l:branchname = GitBranch()
+"  	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+"endfunction
 
 set statusline=
 set statusline+=\ %M
@@ -143,7 +145,7 @@ command Sxhkdrc n ~/.config/sxhkd/sxhkdrc
 command Vimrc n ~/.config/nvim/init.vim
 command Vifmrc n ~/.config/vifm/vifmrc
 command Rofirc n ~/.config/rofi/config.rasi
-command Dunst n ~/.config/dunst/dunstrc
+command Dunstrc n ~/.config/dunst/dunstrc
 command Polybarconfig n ~/.config/polybar/config
 command Zshrc n ~/.zshrc
 
@@ -156,15 +158,16 @@ command WQ wq
 " General settings
 "
 
-filetype on
-filetype plugin on
-syntax on
 set encoding=utf-8
 set splitbelow splitright
 set number relativenumber
 set ignorecase
 set smartcase
 set mouse=a
+
+filetype on
+filetype plugin on
+syntax on
 colorscheme torte
 highlight StatusLine ctermfg=59
 highlight Comment ctermfg=5
