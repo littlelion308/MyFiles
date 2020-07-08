@@ -34,29 +34,29 @@ super + Tab
 super + i
 	~/.local/bin/rofiunicode.sh
 
-super + semicolon 
-	st -e vifm
+super + semicolon
+	st vifm
 
 super + apostrophe
-	st -e vi
+	st vi
 
 super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
 super + backslash
-	st -e bc
+	st bc
 
 super + shift + Tab
 	rofi -show windowcd
 
-super + p 
+super + p
 	~/.local/bin/displyhandler.sh
 
-super + shift + semicolon 
-	st -e htop
+super + shift + semicolon
+	st htop
 
 super + shift + apostrophe
-	st -e bashtop
+	st neomutt
 
 XF86Display
 	~/.local/bin/displyhandler.sh
@@ -64,7 +64,7 @@ XF86Display
 super + shift + backslash
 	st calcurse &
 
-super + w 
+super + w
 	flameshot gui
 
 Print
@@ -76,6 +76,8 @@ super + e
 super + shift + w
 	~/.local/bin/scriptedit.sh
 
+super + shift + p
+	 dash -c /home/christoph/.local/bin/passer.sh m
 
 
 

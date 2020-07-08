@@ -42,39 +42,39 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
 			;;
 		1)
 			bspc desktop $primary I
-			bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+			bspc desktop $secondary I II III IV V VI VII VIII IX X XI
 			;;
 		2)
 			bspc desktop $primary I II
-			bspc desktop $secondary III IV V VI VII VIII IX X XI XII
+			bspc desktop $secondary I II III IV V VI VII VIII IX X
 			;;
 		3)
 			bspc desktop $primary I II III
-			bspc desktop $secondary IV V VI VII VIII IX X XI XII
+			bspc desktop $secondary I II III IV V VI VII VIII IX
 			;;
 		4)
 			bspc desktop $primary I II III IV
-			bspc desktop $secondary V VI VII VIII IX X XI XII
+			bspc desktop $secondary I II III IV V VI VII VIII
 			;;
 		5)
 			bspc desktop $primary I II III IV V
-			bspc desktop $secondary VI VII VIII IX X XI XII
+			bspc desktop $secondary I II III VI VII
 			;;
 		6)
 			bspc desktop $primary I II III IV V VI VI
-			bspc desktop $secondary VIII IX X XI XII
+			bspc desktop $secondary I II III IV V VI
 			;;
 		7)
 			bspc desktop $primary I II III IV V VI VII VII
-			bspc desktop $secondary VIII IX X XI XII
+			bspc desktop $secondary I II III IV V
 			;;
 		8)
 			bspc desktop $primary I II III IV V VI VII VII VIII
-			bspc desktop $secondary IX X XI XII
+			bspc desktop $secondary I II III IV
 			;;
 		9)
 			bspc desktop $primary I II III IV V VI VII VII VIII IX
-			bspc desktop $secondary X XI XII
+			bspc desktop $secondary I II III
 			;;
 		10)
 			bspc desktop $primary I II III IV V VI VII VII VIII IX X
@@ -82,12 +82,12 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
 			;;
 		11)
 			bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-			bspc desktop $secondary XII
+			bspc desktop $secondary I
 			;;
 		12)
 			bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
 			;;
-	esac 
+	esac
     fi
     }
 
@@ -106,410 +106,410 @@ morescreen() { # If multi-monitor is selected and there are more than two screen
 			0)
 				;;
 			1)
-				bspc desktop $primary I
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I
+				bspc desktop $tertiary -d I II III IV V VI VII VIII IX X XI
 				;;
 			2)
-				bspc desktop $primary I II
-				bspc desktop $secondary III IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II
+				bspc desktop $tertiary -d I II III IV V VI VII VIII IX X
 				;;
 			3)
-				bspc desktop $primary I II III
-				bspc desktop $secondary IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III
+				bspc desktop $tertiary -d I II III IV V VI VII VIII IX
 				;;
 			4)
-				bspc desktop $primary I II III IV
-				bspc desktop $secondary V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV
+				bspc desktop $tertiary -d I II III IV V VI VII VIII
 				;;
 			5)
-				bspc desktop $primary I II III IV V
-				bspc desktop $secondary VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V
+				bspc desktop $tertiary -d I II III IV V VI VII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d I II III IV V VI
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d I II III IV V
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d I II III IV
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d I II
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d I
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		1)
-			bspc desktop $primary I
+			bspc desktop $primary -d I
 			desktopratiob=$(printf "0\\n2\\n3\\n4\\n5\\n6\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d I II III IV V VI VII VIII IX X XI
 				;;
 			2)
-				bspc desktop $primary I II
-				bspc desktop $secondary III IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II
+				bspc desktop $tertiary -d I II III IV V VI VII VIII IX
 				;;
 			3)
-				bspc desktop $primary I II III
-				bspc desktop $secondary IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III
+				bspc desktop $tertiary -d I II III IV V VI VII VIII
 				;;
 			4)
-				bspc desktop $primary I II III IV
-				bspc desktop $secondary V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV
+				bspc desktop $tertiary -d I II III IV V VI VII
 				;;
 			5)
-				bspc desktop $primary I II III IV V
-				bspc desktop $secondary VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V
+				bspc desktop $tertiary -d VI VII VIII IX X XI XII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d I II III IV V
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d I II III
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d I II III
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d I II
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d I II
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		2)
-			bspc desktop $primary I II
+			bspc desktop $primary -d I II
 			desktopratiob=$(printf "0\\n3\\n4\\n5\\n6\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			3)
-				bspc desktop $primary I II III
-				bspc desktop $secondary IV V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III
+				bspc desktop $tertiary -d IV V VI VII VIII IX X XI XII
 				;;
 			4)
-				bspc desktop $primary I II III IV
-				bspc desktop $secondary V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV
+				bspc desktop $tertiary -d V VI VII VIII IX X XI XII
 				;;
 			5)
-				bspc desktop $primary I II III IV V
-				bspc desktop $secondary VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V
+				bspc desktop $tertiary -d VI VII VIII IX X XI XII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		3)
-			bspc desktop $primary I II III
+			bspc desktop $primary -d I II III
 			desktopratiob=$(printf "0\\n4\\n5\\n6\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			4)
-				bspc desktop $primary I II III IV
-				bspc desktop $secondary V VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV
+				bspc desktop $tertiary -d V VI VII VIII IX X XI XII
 				;;
 			5)
-				bspc desktop $primary I II III IV V
-				bspc desktop $secondary VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V
+				bspc desktop $tertiary -d VI VII VIII IX X XI XII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		4)
-			bspc desktop $primary I II III IV
+			bspc desktop $primary -d I II III IV
 			desktopratiob=$(printf "0\\n4\\n5\\n6\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			5)
-				bspc desktop $primary I II III IV V
-				bspc desktop $secondary VI VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V
+				bspc desktop $tertiary -d VI VII VIII IX X XI XII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		5)
-			bspc desktop $primary I II III IV V
+			bspc desktop $primary -d I II III IV V
 			desktopratiob=$(printf "0\\n6\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			6)
-				bspc desktop $primary I II III IV V VI VI
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VI
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		6)
-			bspc desktop $primary I II III IV V VI VI
+			bspc desktop $primary -d I II III IV V VI VI
 			desktopratiob=$(printf "0\\n7\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			7)
-				bspc desktop $primary I II III IV V VI VII VII
-				bspc desktop $secondary VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII
+				bspc desktop $tertiary -d VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		7)
-			bspc desktop $primary I II III IV V VI VII VII
+			bspc desktop $primary -d I II III IV V VI VII VII
 			desktopratiob=$(printf "0\\n8\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			8)
-				bspc desktop $primary I II III IV V VI VII VII VIII
-				bspc desktop $secondary IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII
+				bspc desktop $tertiary -d IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		8)
-			bspc desktop $primary I II III IV V VI VII VII VIII
+			bspc desktop $primary -d I II III IV V VI VII VII VIII
 			desktopratiob=$(printf "0\\n9\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			9)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX
-				bspc desktop $secondary X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX
+				bspc desktop $tertiary -d X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		9)
-			bspc desktop $primary I II III IV V VI VII VII VIII IX
+			bspc desktop $primary -d I II III IV V VI VII VII VIII IX
 			desktopratiob=$(printf "0\\10\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			10)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X
-				bspc desktop $secondary XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X
+				bspc desktop $tertiary -d XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		10)
-			bspc desktop $primary I II III IV V VI VII VII VIII IX X
+			bspc desktop $primary -d I II III IV V VI VII VII VIII IX X
 			desktopratiob=$(printf "0\\n11\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			11)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
-				bspc desktop $secondary XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI
+				bspc desktop $tertiary -d XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		11)
-			bspc desktop $primary I II III IV V VI VII VII VIII IX X XI
+			bspc desktop $primary -d I II III IV V VI VII VII VIII IX X XI
 			desktopratiob=$(printf "0\\n12" | rofi -dmenu -p "Last on second")
 			case $desktopratiob in
 			0)
-				bspc desktop $secondary II III IV V VI VII VIII IX X XI XII
+				bspc desktop $tertiary -d II III IV V VI VII VIII IX X XI XII
 				;;
 			12)
-				bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+				bspc desktop $secondary -d I II III IV V VI VII VII VIII IX X XI XII
 				;;
-			esac 
+			esac
 			;;
 		12)
-			bspc desktop $primary I II III IV V VI VII VII VIII IX X XI XII
+			bspc desktop $primary -d I II III IV V VI VII VII VIII IX X XI XII
 			;;
-	esac 
+	esac
 	}
 
 multimon() { # Multi-monitor handler.
@@ -520,6 +520,7 @@ multimon() { # Multi-monitor handler.
 
 onescreen() { # If only one output available or chosen.
 	xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$allposs" | grep -v "$1" | awk '{print "--output", $1, "--off"}' | tr '\n' ' ')
+	bspc desktop $primary -d I II III IV V VI VII VII VIII IX X XI XII
 	}
 
 postrun() { # Stuff to run to clean up.

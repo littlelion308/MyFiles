@@ -7,3 +7,4 @@ configuration {
 	combi-modi: [drun, ssh, window];
 	theme: "Adapta-Nokto";
 }
+@import "/usr/share/rofi/themes/Adapta-Nokto.rasi"

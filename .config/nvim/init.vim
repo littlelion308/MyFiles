@@ -3,14 +3,16 @@
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ThePrimeagen/vim-be-good'
+Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/fzf.vim',
+Plug 'preservim/nerdtree'
 
-" Plug 'preservim/nerdtree'
+" Plug 'vim/killersheep'
 " Plug 'vimwiki/vimwiki'
 " Plug 'ap/vim-css-color'
 
@@ -74,6 +76,16 @@ nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
+nnoremap gf :NERDTreeToggle<CR>
+nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-c>c :cd ~/.config
+nnoremap <C-c>l :cd ~/.local
+nnoremap <C-c>h :cd ~/.
+nnoremap <C-c>m :cd /mnt/
+
+
+" nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
@@ -83,6 +95,8 @@ map <Space>d :setlocal spell! spelllang=de_de<CR>
 map <Space>f :setlocal spell! spelllang=fr<CR>
 map <Space>a :source ~/.config/nvim/init.vim<CR>
 map <Space>gh :!groff -m ms % -T html > %.html<CR>
+
+
 "map <C-]> <C-[>
 
 "
@@ -91,6 +105,7 @@ map <Space>gh :!groff -m ms % -T html > %.html<CR>
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
+autocmd BufWritePost *sh !shellcheck %
 autocmd InsertEnter * norm zz
 autocmd BufWritePre * %s/\s\+$//e
 autocmd User GoyoEnter nested call <SID>goyo_enter()
@@ -140,19 +155,24 @@ highlight StatusLine ctermfg=59
 " Comands
 "
 
-command Bspwmrc n ~/.config/bspwm/bspwmrc
-command Sxhkdrc n ~/.config/sxhkd/sxhkdrc
-command Vimrc n ~/.config/nvim/init.vim
-command Vifmrc n ~/.config/vifm/vifmrc
-command Rofirc n ~/.config/rofi/config.rasi
-command Dunstrc n ~/.config/dunst/dunstrc
-command Polybarconfig n ~/.config/polybar/config
-command Zshrc n ~/.zshrc
+command! Bspwmrc n ~/.config/bspwm/bspwmrc
+command! Sxhkdrc n ~/.config/sxhkd/sxhkdrc
+command! Vimrc n ~/.config/nvim/init.vim
+command! Vifmrc n ~/.config/vifm/vifmrc
+command! Rofirc n ~/.config/rofi/config.rasi
+command! Dunstrc n ~/.config/dunst/dunstrc
+command! Polybarconfig n ~/.config/polybar/config
+command! Zshrc n ~/.zshrc
+command! Muttrc n ~/.config/mutt/muttrc
+command! Addressbook n ~/.config/abook/addressbook
+command! Zprofile n ~/.zprofile
 
-command Q q
-command W w
-command Wq wq
-command WQ wq
+" command Addressbook n ~/.config/abook/addressbook
+
+command! Q q
+command! W w
+command! Wq wq
+command! WQ wq
 
 "
 " General settings
@@ -167,8 +187,10 @@ set mouse=a
 
 filetype on
 filetype plugin on
+
 syntax on
 colorscheme torte
+
 highlight StatusLine ctermfg=59
 highlight Comment ctermfg=5
 
