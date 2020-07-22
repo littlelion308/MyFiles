@@ -79,10 +79,10 @@ nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap gf :NERDTreeToggle<CR>
 nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
 nnoremap <C-p> :FZF<CR>
-nnoremap <C-c>c :cd ~/.config
-nnoremap <C-c>l :cd ~/.local
-nnoremap <C-c>h :cd ~/.
-nnoremap <C-c>m :cd /mnt/
+nnoremap <Space>cc :cd ~/.config<CR>
+nnoremap <Space>cl :cd ~/.local<CR>
+nnoremap <Space>ch :cd ~/.<CR>
+nnoremap <Space>cm :cd /mnt/<CR>
 
 
 " nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>

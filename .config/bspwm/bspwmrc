@@ -1,16 +1,18 @@
 #! /bin/sh
 
-[ $(xrandr -q | grep "connected" | awk '/ connected/ {print $1}' | wc -l) -lt 2] &&
-bspc monitor -d I II III IV V VI VII VIII IX X XI XII
-# [ $(xrandr -q | grep "connected" | awk '/ connected/ {print $1}' | wc -l) -lt 3] &&
-bspc monitor LVDS-1 -d I II III IV V
+ [ "$(xrandr -q | grep -c "connected" )" -eq 1 ] &&
+bspc monitor -d I II III IV V VI VII VIII IX X XI XII ||
+ # [ "$(xrandr -q | grep -c "connected" )" -eq 2 ] &&
+bspc monitor LVDS-1 -d I II III IV V &&
 bspc monitor VGA-1 -d I II III IV V VI VII
+~/.local/bin/polybar_lounch.sh
 
 bspc config border_width         2
 bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
 numlockx on
 
 # CLEANUP!!!!
@@ -33,7 +35,6 @@ bspc rule -a qutebrowser:qutebrowser desktop='^10'
 
 # Autostart
 
-~/.local/bin/polybar_lounch.sh
 
 # if type "xrandr"; then
 # 	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
@@ -56,7 +57,7 @@ st calcurse &
 sleep 1s
 bspc desktop -l next
 bspc desktop -f '^1'
-geary &
+# geary &
 qutebrowser &
 qutebrowser &
 sxhkd &
@@ -86,7 +87,7 @@ st tmux &
 # st tmux &
 # st tmux &
 zathura &
-android-studio &
+# android-studio &
 # zathura &
 # zathura &
 # zathura &
@@ -102,5 +103,7 @@ android-studio &
 # st tmux calcurse &
 # calcurse --daemon
 flameshot &
+st zsh -d xrandr -q
 sleep 5s
 bspc rule -r qutebrowser:qutebrowser
+xrandr -q >> ~/.local/share/debug.log.xrandr
