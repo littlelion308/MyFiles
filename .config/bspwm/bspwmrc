@@ -3,8 +3,8 @@
  [ "$(xrandr -q | grep -c "connected" )" -eq 1 ] &&
 bspc monitor -d I II III IV V VI VII VIII IX X XI XII ||
  # [ "$(xrandr -q | grep -c "connected" )" -eq 2 ] &&
-bspc monitor LVDS-1 -d I II III IV V &&
-bspc monitor VGA-1 -d I II III IV V VI VII
+bspc monitor LVDS -d I II III IV V &&
+bspc monitor VGA-0 -d I II III IV V VI VII
 ~/.local/bin/polybar_lounch.sh
 
 bspc config border_width         2
@@ -13,25 +13,27 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
+feh --bg-scale Downloads/BG.png
 numlockx on
 
 # CLEANUP!!!!
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
-rm ~/.sc_history
-rm ~/.sc-iminfo
-rm ~/.lesshst
-rm -r ~/.audacity-data
-rm ~/.2048
-rm -r ~/.java
-rm -r ~/.npm
-rm -r ~/.icons
-rm -r ~/.pik
+# export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+# rm ~/.sc_history
+# rm ~/.sc-iminfo
+# rm ~/.lesshst
+# rm -r ~/.audacity-data
+# rm ~/.2048
+# rm -r ~/.java
+# rm -r ~/.npm
+# rm -r ~/.icons
+# rm -r ~/.pik
+# source ~/.zprofile
 
 # Ruls
-# bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
+bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
 bspc rule -a Geary:geary desktop='^12'
-bspc rule -a Zathura:org.pwmt.zathura state=tiled desktop='^11'
-bspc rule -a qutebrowser:qutebrowser desktop='^10'
+# bspc rule -a Zathura:org.pwmt.zathura state=tiled desktop='^11'
+# bspc rule -a qutebrowser:qutebrowser desktop='^10'
 
 # Autostart
 
@@ -54,23 +56,19 @@ bspc rule -a qutebrowser:qutebrowser desktop='^10'
 bspc desktop -f '^12'
 st neomutt &
 st calcurse &
-sleep 1s
+sleep 3s
 bspc desktop -l next
 bspc desktop -f '^1'
-# geary &
-qutebrowser &
-qutebrowser &
 sxhkd &
 dunst &
 pasystray &
+volctl &
 lxpolkit &
-bspc rule -a St:st desktop='^11'
-st tmux &
-st tmux &
-st tmux &
-st tmux &
-st tmux &
-st tmux &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1&
+# geary &
+# qutebrowser &
+# qutebrowser &
+# bspc rule -a St:st desktop='^11'
 # st tmux &
 # st tmux &
 # st tmux &
@@ -86,7 +84,13 @@ st tmux &
 # st tmux &
 # st tmux &
 # st tmux &
-zathura &
+# st tmux &
+# st tmux &
+# st tmux &
+# st tmux &
+# st tmux &
+# st tmux &
+# zathura &
 # android-studio &
 # zathura &
 # zathura &
@@ -102,8 +106,8 @@ zathura &
 # st tmux calcurse &
 # st tmux calcurse &
 # calcurse --daemon
-flameshot &
-st zsh -d xrandr -q
-sleep 5s
-bspc rule -r qutebrowser:qutebrowser
-xrandr -q >> ~/.local/share/debug.log.xrandr
+# flameshot &
+# st zsh -d xrandr -q
+# sleep 5s
+# bspc rule -r qutebrowser:qutebrowser
+# xrandr -q >> ~/.local/share/debug.log.xrandr

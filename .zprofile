@@ -1,8 +1,11 @@
 # Vars...
-export EDITOR="nvim"
+export EDITOR="vi"
 export TERMINAL="st"
-export BROWSER="qutebrowser"
+export TERM="st"
+export BROWSER="firefox"
 export READER="zathura"
+export LESSHISTFILE="-"
+# export $ZDOTDIR="$HOME/.config/zsh"
 
 # Cleanup
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -14,13 +17,14 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+# $PATH=$PATH:~/.local/bin
 
 source ~/.config/zsh/.zshrc
 
 
 # autostart tmux
 
-[ $TTY = /dev/tty1 ] && tbsm
+[ $TTY = /dev/tty1 ] && tbsm && tmux
 [ $TTY = /dev/tty2 ] && tmux
 [ $TTY = /dev/tty3 ] && tmux
 [ $TTY = /dev/tty4 ] && tmux
