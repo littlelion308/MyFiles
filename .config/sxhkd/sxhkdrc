@@ -4,16 +4,16 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 super + KP_Enter
-	st
+	alacritty
 
 super + shift + Return
-	alacritty
+	st
 
 super + shift + KP_Enter
-	alacritty
+	st
 # program launcher
 super + d
 	rofi -show combi
@@ -47,16 +47,16 @@ super + i
 	~/.local/bin/rofiunicode.sh
 
 super + semicolon
-	st vifm
+	 alacritty -e vifm
 
 super + apostrophe
-	st vi
+	 alacritty -e vi
 
 super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
 super + backslash
-	st R
+	 alacritty -e R
 
 super + shift + Tab
 	rofi -show windowcd
@@ -65,16 +65,16 @@ super + p
 	~/.local/bin/displyhandler.sh
 
 super + shift + semicolon
-	st htop
+	 alacritty -e htop
 
 super + shift + apostrophe
-	st neomutt
+	 alacritty -e neomutt
 
 XF86Display
 	~/.local/bin/displyhandler.sh
 
 super + shift + backslash
-	st calcurse &
+	 alacritty -e calcurse &
 
 super + w
 	flameshot gui

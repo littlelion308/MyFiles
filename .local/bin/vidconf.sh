@@ -1,7 +1,7 @@
 #!/bin/sh
 bspc desktop -f '^11'
-st pulsemixer&
+alacritty -e pulsemixer&
 pavucontrol&
 bspc desktop -f '^10'
-st htop&
+alacritty -e htop&
 teams&

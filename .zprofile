@@ -1,7 +1,7 @@
 # Vars...
 export EDITOR="vi"
-export TERMINAL="st"
-export TERM="st"
+export TERMINAL="alacritty"
+export TERM="alacritty"
 export BROWSER="firefox"
 export READER="zathura"
 export LESSHISTFILE="-"
