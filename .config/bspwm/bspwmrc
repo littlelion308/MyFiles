@@ -1,11 +1,13 @@
 #! /bin/sh
 
- [ "$(xrandr -q | grep -c "connected" )" -eq 1 ] &&
+# Desktops
+
+[ $(xrandr -q | grep "connected" | grep -v "disconnected" | wc -l) = 1 ] &&
 bspc monitor -d I II III IV V VI VII VIII IX X XI XII ||
- # [ "$(xrandr -q | grep -c "connected" )" -eq 2 ] &&
 bspc monitor LVDS -d I II III IV V &&
 bspc monitor VGA-0 -d I II III IV V VI VII
-~/.local/bin/polybar_lounch.sh
+
+# Config
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -13,102 +15,28 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
-feh --bg-scale Downloads/BG.png
-numlockx on
-
-# CLEANUP!!!!
-# export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
-# rm ~/.sc_history
-# rm ~/.sc-iminfo
-# rm ~/.lesshst
-# rm -r ~/.audacity-data
-# rm ~/.2048
-# rm -r ~/.java
-# rm -r ~/.npm
-# rm -r ~/.icons
-# rm -r ~/.pik
-# source ~/.zprofile
+bspc desktop -f '^1'
+bspc desktop -l next
+st calcurse &
+st neomutt &
+sleep 1s
+bspc desktop -f '^12'
 
 # Ruls
-bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
+
 bspc rule -a Geary:geary desktop='^12'
-# bspc rule -a Zathura:org.pwmt.zathura state=tiled desktop='^11'
+bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
 bspc rule -a Zathura:org.pwmt.zathura state=tiled
-# bspc rule -a qutebrowser:qutebrowser desktop='^10'
 
 # Autostart
 
-
-# if type "xrandr"; then
-# 	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-# 		MONITOR=$m polybar --reload mybarBa &
-# 	done
-# else
-# 	polybar ---reload mybarBa &
-# fi
-
-
-
-
-# polybar mybar&
-# polybar mybarBa &
-# polybar mybarBb &
 # teams &
-bspc desktop -f '^12'
-st neomutt &
-st calcurse &
-sleep 3s
-bspc desktop -l next
-bspc desktop -f '^1'
-sxhkd &
-dunst &
-pasystray &
-volctl &
-lxpolkit &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1&
-# geary &
-# qutebrowser &
-# qutebrowser &
-# bspc rule -a St:st desktop='^11'
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# st tmux &
-# zathura &
-# android-studio &
-# zathura &
-# zathura &
-# zathura &
-# zathura &
-# teams &
-# ~/.local/bin/displyhandler.sh &
-# ~/.local/bin/screen _current.sh &
-# supertux2 &
-# arandr &
-# geary &
-# geary &
-# st tmux calcurse &
-# st tmux calcurse &
-# calcurse --daemon
-# flameshot &
-# st zsh -d xrandr -q
-# sleep 5s
-# bspc rule -r qutebrowser:qutebrowser
-# xrandr -q >> ~/.local/share/debug.log.xrandr
+dunst &
+feh --bg-scale Downloads/BG.png
+lxpolkit &
+numlockx on
+pasystray &
+sxhkd &
+volctl &
+~/.local/bin/polybar_lounch.sh
