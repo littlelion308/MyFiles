@@ -6,7 +6,7 @@ rm -r ~/.icons >> /dev/zero
 rm -r ~/.ipython >> /dev/zero
 rm -r ~/.java >> /dev/zero
 rm -r ~/.lesshst >> /dev/zero
-rm -r ~/.npm >> /dev/zero
+rm -rf ~/.npm >> /dev/zero
 rm -r ~/.pik >> /dev/zero
 rm -r ~/.thumbnails >> /dev/zero
 rm ~/.2048 >> /dev/zero
