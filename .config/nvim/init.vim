@@ -88,7 +88,6 @@ nnoremap <Space>cs :cd /<CR>
 nnoremap <Space>cd :cd ~/Downloads/Code/MyFiles/<CR>
 nnoremap <Space>cm :cd ~/.config/mutt/<CR>
 
-
 " nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
 
 xnoremap K :move '<-2<CR>gv-gv
@@ -99,7 +98,6 @@ map <Space>d :setlocal spell! spelllang=de_de<CR>
 map <Space>f :setlocal spell! spelllang=fr<CR>
 map <Space>a :source ~/.config/nvim/init.vim<CR>
 map <Space>gh :!groff -m ms % -T html > %.html<CR>
-
 
 "map <C-]> <C-[>
 
