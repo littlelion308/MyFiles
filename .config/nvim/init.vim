@@ -158,17 +158,17 @@ highlight StatusLine ctermfg=59
 " Comands
 "
 
-command! Bspwmrc n ~/.config/bspwm/bspwmrc
-command! Sxhkdrc n ~/.config/sxhkd/sxhkdrc
-command! Vimrc n ~/.config/nvim/init.vim
-command! Vifmrc n ~/.config/vifm/vifmrc
-command! Rofirc n ~/.config/rofi/config.rasi
-command! Dunstrc n ~/.config/dunst/dunstrc
-command! Polybarconfig n ~/.config/polybar/config
-command! Zshrc n ~/.zshrc
-command! Muttrc n ~/.config/mutt/muttrc
-command! Addressbook n ~/.config/abook/addressbook
-command! Zprofile n ~/.zprofile
+command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
+command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
+command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
+command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
+command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
+command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
+command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
+command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
+command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
+command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
+command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
 
 " command Addressbook n ~/.config/abook/addressbook
 
