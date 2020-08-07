@@ -6,6 +6,7 @@
 bspc monitor -d I II III IV V VI VII VIII IX X XI XII ||
 bspc monitor LVDS -d I II III IV V &&
 bspc monitor VGA-0 -d I II III IV V VI VII
+~/.local/bin/polybar_lounch.sh
 
 # Config
 
@@ -39,4 +40,3 @@ numlockx on
 pasystray &
 sxhkd &
 volctl &
-~/.local/bin/polybar_lounch.sh
