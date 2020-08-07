@@ -2,19 +2,20 @@
 "
 
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'junegunn/goyo.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'kovetskiy/sxhkd-vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/fzf.vim',
-Plug 'preservim/nerdtree'
 
+" Plug 'ap/vim-css-color'
 " Plug 'vim/killersheep'
 " Plug 'vimwiki/vimwiki'
-" Plug 'ap/vim-css-color'
+Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'junegunn/fzf.vim',
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'kovetskiy/sxhkd-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 
 call plug#end()
 
@@ -79,10 +80,12 @@ nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap gf :NERDTreeToggle<CR>
 nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
 nnoremap <C-p> :FZF<CR>
-nnoremap <Space>cc :cd ~/.config<CR>
-nnoremap <Space>cl :cd ~/.local<CR>
+nnoremap <Space>cc :cd ~/Downloads/Code/MyFiles/.config<CR>
+nnoremap <Space>cl :cd ~/Downloads/Code/MyFiles/.local<CR>
 nnoremap <Space>ch :cd ~/.<CR>
-nnoremap <Space>cm :cd /mnt/<CR>
+nnoremap <Space>cs :cd /<CR>
+nnoremap <Space>cd :cd ~/Downloads/Code/MyFiles/<CR>
+nnoremap <Space>cm :cd ~/.config/mutt/<CR>
 
 
 " nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
