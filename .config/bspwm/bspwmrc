@@ -19,7 +19,7 @@ bspc desktop -f '^1'
 bspc desktop -l next
 st calcurse &
 st neomutt &
-sleep 1s
+sleep 2s
 bspc desktop -f '^12'
 
 # Ruls
