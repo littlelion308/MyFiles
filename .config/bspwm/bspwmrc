@@ -18,8 +18,8 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 bspc desktop -f '^12'
 bspc desktop -l next
-st calcurse &
-st neomutt &
+alacritty calcurse &
+alacritty neomutt &
 sleep 2s
 bspc desktop -f '^1'
 
