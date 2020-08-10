@@ -4,10 +4,10 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	alacritty -t Terminal
 
 super + KP_Enter
-	alacritty
+	alacritty -t Terminal
 
 super + shift + Return
 	st
@@ -47,16 +47,16 @@ super + i
 	~/.local/bin/rofiunicode.sh
 
 super + semicolon
-	 alacritty -e vifm
+	 alacritty -e vifm -t vifm
 
 super + apostrophe
-	 alacritty -e vi
+	 alacritty -e vi -t vi
 
 super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
 super + backslash
-	 alacritty -e R
+	 alacritty -e R -t R (languageshell)
 
 super + shift + Tab
 	rofi -show windowcd
@@ -65,16 +65,16 @@ super + p
 	~/.local/bin/displyhandler.sh
 
 super + shift + semicolon
-	 alacritty -e htop
+	 alacritty -e htop -t htop
 
 super + shift + apostrophe
-	 alacritty -e neomutt
+	 alacritty -e neomutt -t neomutt
 
 XF86Display
 	~/.local/bin/displyhandler.sh
 
 super + shift + backslash
-	 alacritty -e calcurse &
+	 alacritty -e calcurse -t calcurse &
 
 super + w
 	flameshot gui
