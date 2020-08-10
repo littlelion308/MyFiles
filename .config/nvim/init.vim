@@ -108,10 +108,12 @@ map <Space>gh :!groff -m ms % -T html > %.html<CR>
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
 autocmd BufWritePost *sh !shellcheck %
+autocmd BufWritePost *bspwmrc !shellcheck %
 autocmd InsertEnter * norm zz
 autocmd BufWritePre * %s/\s\+$//e
 autocmd User GoyoEnter nested call <SID>goyo_enter()
 autocmd User GoyoLeave nested call <SID>goyo_leave()
+autocmd Filetype sh !shellcheck %
 
 " autocmd! User GoyoEnter colorscheme torte
 " autocmd! User GoyoEnter sleep 5
