@@ -47,16 +47,16 @@ super + i
 	~/.local/bin/rofiunicode.sh
 
 super + semicolon
-	 alacritty -e vifm -t vifm
+	 alacritty -t vifm -e vifm
 
 super + apostrophe
-	 alacritty -e vi -t vi
+	 alacritty -t vi -e vi
 
 super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
 super + backslash
-	 alacritty -e R -t R (languageshell)
+	 alacritty -t R (languageshell) -e R
 
 super + shift + Tab
 	rofi -show windowcd
@@ -65,16 +65,16 @@ super + p
 	~/.local/bin/displyhandler.sh
 
 super + shift + semicolon
-	 alacritty -e htop -t htop
+	 alacritty -t htop -e htop
 
 super + shift + apostrophe
-	 alacritty -e neomutt -t neomutt
+	 alacritty -t neomutt -e neomutt
 
 XF86Display
 	~/.local/bin/displyhandler.sh
 
 super + shift + backslash
-	 alacritty -e calcurse -t calcurse &
+	 alacritty -t calcurse -e calcurse &
 
 super + w
 	flameshot gui
