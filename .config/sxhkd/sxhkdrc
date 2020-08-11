@@ -56,7 +56,7 @@ super + shift + {e,s}
 	~/.local/bin/rofishutdown.sh
 
 super + backslash
-	 alacritty -t R (languageshell) -e R
+	 alacritty -t R -e R
 
 super + shift + Tab
 	rofi -show windowcd
@@ -74,7 +74,7 @@ XF86Display
 	~/.local/bin/displyhandler.sh
 
 super + shift + backslash
-	 alacritty -t calcurse -e calcurse &
+	 alacritty -t calcurse -e calcurse
 
 super + w
 	flameshot gui
