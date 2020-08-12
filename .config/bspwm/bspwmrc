@@ -31,7 +31,7 @@ bspc rule -a Zathura:org.pwmt.zathura state=tiled
 
 # Autostart
 
-# teams &
+teams &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1&
 dunst &
 feh --bg-scale Downloads/BG.png
