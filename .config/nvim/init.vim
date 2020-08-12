@@ -107,6 +107,7 @@ map <Space>gh :!groff -m ms % -T html > %.html<CR>
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
+autocmd Filetype markdown !pandoc -t ms -o %.pdf %
 autocmd BufWritePost *sh !shellcheck %
 autocmd BufWritePost *bspwmrc !shellcheck %
 autocmd InsertEnter * norm zz
