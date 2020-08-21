@@ -4,19 +4,23 @@
 call plug#begin()
 
 " Plug 'ap/vim-css-color'
+" Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
-" Plug 'vimwiki/vimwiki'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf.vim',
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'kovetskiy/sxhkd-vim'
+Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -78,7 +82,7 @@ nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
-nnoremap gf :NERDTreeToggle<CR>
+" nnoremap gf :NERDTreeToggle<CR>
 nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
 nnoremap <C-p> :FZF<CR>
 nnoremap <Space>cc :cd ~/Downloads/Code/MyFiles/.config<CR>
@@ -93,12 +97,13 @@ nnoremap <Space>cm :cd ~/.config/mutt/<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '<+1<CR>gv-gv
 
-map <Space>e :setlocal spell! spelllang=en_us<CR>
-map <Space>d :setlocal spell! spelllang=de_de<CR>
-map <Space>f :setlocal spell! spelllang=fr<CR>
-map <Space>a :source ~/.config/nvim/init.vim<CR>
-map <Space>gh :!groff -m ms % -T html > %.html<CR>
-
+nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
+nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
+nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
+nnoremap <Space>a :source ~/.config/nvim/init.vim<CR>
+nnoremap <Space>gh :!groff -m ms % -T html > %.html<CR>
+vmap < <gv
+vmap > >gv
 "map <C-]> <C-[>
 
 "
@@ -189,6 +194,8 @@ set number relativenumber
 set ignorecase
 set smartcase
 set mouse=a
+
+let mapleader=","
 
 filetype on
 filetype plugin on
