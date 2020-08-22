@@ -5,7 +5,7 @@ call plug#begin()
 
 " Plug 'ap/vim-css-color'
 " Plug 'preservim/nerdtree'
-" Plug 'vim/killersheep'
+Plug 'vim/killersheep'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'easymotion/vim-easymotion'
@@ -195,7 +195,6 @@ set ignorecase
 set smartcase
 set mouse=a
 
-let mapleader=","
 
 filetype on
 filetype plugin on
