@@ -2,9 +2,9 @@
 SCRIPT=$(printf 'wetter\ngetnews' | rofi -dmenu -p 'show wath')
 case $SCRIPT in
 	wetter)
-		curl wttr.in/"$(rofi -dmenu -p 'Where?')"
+		alacritty --hold -e curl wttr.in/"$(rofi -dmenu -p 'Where?')"
 		;;
 	getnews)
-		curl getnews.tech/"$(rofi -dmenu -p 'Topic?')"
+		alacritty --hold -e curl getnews.tech/"$(rofi -dmenu -p 'Topic?')"
 		;;
 esac
