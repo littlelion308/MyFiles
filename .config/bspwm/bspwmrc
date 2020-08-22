@@ -39,6 +39,6 @@ lxpolkit &
 numlockx on
 pasystray &
 sxhkd &
-# volctl &
-pa-applet &
+volctl &
+# pa-applet &
 
