@@ -99,6 +99,11 @@ super + shift {_,ctrl + }q
 super + z
 	zathura
 
+super + o
+	~/.local/bin/shower.sh
+
+
+
 #
 # bspwm hotkeys
 #
