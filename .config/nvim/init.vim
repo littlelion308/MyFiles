@@ -168,7 +168,6 @@ function! s:goyo_enter()
   	set noshowmode
   	set noshowcmd
   	set scrolloff=999
-  	" colorscheme torte
   	highlight Comment ctermfg=4
   	Limelight
 endfunction
@@ -177,7 +176,6 @@ function! s:goyo_leave()
   	set showmode
   	set showcmd
   	set scrolloff=5
-  	" colorscheme default
   	Limelight!
   	highlight Comment ctermfg=5
 endfunction
@@ -185,3 +183,10 @@ endfunction
 " Easymotion
 
 map ; <Plug>(easymotion-prefix)
+
+
+"
+" Second Settings
+"
+
+highlight Comment ctermfg=5
