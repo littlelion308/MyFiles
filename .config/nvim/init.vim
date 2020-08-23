@@ -1,11 +1,125 @@
+" General settings
+"
+colorscheme torte
+filetype on
+filetype plugin on
+highlight Comment ctermfg=5
+highlight StatusLine ctermfg=59
+let mapleader='\'
+set encoding=utf-8
+set ignorecase
+set mouse=a
+set number relativenumber
+set smartcase
+set splitbelow splitright
+syntax on
+
+"
+" Comands
+"
+
+command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
+command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
+command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
+command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
+command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
+command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
+command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
+command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
+command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
+command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
+command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
+command! Q q
+command! W w
+command! WQ wq
+command! Wq wq
+
+"
+" Mappings
+"
+
+" nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
+" nnoremap gf :NERDTreeToggle<CR>
+" nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-w><C-h> :vertical resize -2<CR>
+nnoremap <C-w><C-j> :resize -2<CR>
+nnoremap <C-w><C-k> :resize +2<CR>
+nnoremap <C-w><C-l> :vertical resize +2<CR>
+nnoremap <Space>cc :cd ~/Downloads/Code/MyFiles/.config<CR>
+nnoremap <Space>cd :cd ~/Downloads/Code/MyFiles/<CR>
+nnoremap <Space>ch :cd ~/.<CR>
+nnoremap <Space>cl :cd ~/Downloads/Code/MyFiles/.local<CR>
+nnoremap <Space>cm :cd ~/.config/mutt/<CR>
+nnoremap <Space>cs :cd /<CR>
+nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
+nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
+nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
+nnoremap <Space>gh :!groff -m ms % -T html > %.html<CR>
+vmap < <gv
+vmap > >gv
+xnoremap J :move '<+1<CR>gv-gv
+xnoremap K :move '<-2<CR>gv-gv
+
+"
+" Autocommands
+"
+
+autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
+autocmd Filetype markdown !pandoc -t ms -o %.pdf %
+autocmd BufWritePost *sh !shellcheck %
+autocmd BufWritePost *bspwmrc !shellcheck %
+autocmd InsertEnter * norm zz
+autocmd BufWritePre * %s/\s\+$//e
+autocmd Filetype sh !shellcheck %
+autocmd BufWritePost *init.vim source ~/.config/nvim/init.vim
+
+"
+" Status Line
+"
+
+set statusline=
+set statusline+=\ %M
+set statusline+=\ %F
+set statusline+=\ %r
+set statusline+=\ %y
+set statusline+=%=
+set statusline+=\ %l/%L:%c
+set statusline+=\ %p%%
+set statusline+=\ [%n]
+highlight StatusLine ctermfg=59
+
+"
+" Comands
+"
+
+
+command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
+command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
+command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
+command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
+command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
+command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
+command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
+command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
+command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
+command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
+command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
+command! Q q
+command! W w
+command! WQ wq
+command! Wq wq
+"
 " Plugins
 "
 
-let mapleader=';'
-
 call plug#begin()
 
-" Plug 'ap/vim-css-color'
 " Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
@@ -38,7 +152,6 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -47,6 +160,9 @@ function! s:check_back_space() abort
 endfunction
 
 " Goyo/limelight
+
+autocmd User GoyoEnter nested call <SID>goyo_enter()
+autocmd User GoyoLeave nested call <SID>goyo_leave()
 
 function! s:goyo_enter()
   	set noshowmode
@@ -66,149 +182,6 @@ function! s:goyo_leave()
   	highlight Comment ctermfg=5
 endfunction
 
-"
-" Mappings
-"
+" Easymotion
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-"nnoremap <Down> :resize -2<CR>
-"nnoremap <Up> :resize +2<CR>
-"nnoremap <Left> :vertical resize -2<CR>
-"nnoremap <Right> :vertical resize +2<CR>
-
-nnoremap <C-w><C-h> :vertical resize -2<CR>
-nnoremap <C-w><C-l> :vertical resize +2<CR>
-nnoremap <C-w><C-k> :resize +2<CR>
-nnoremap <C-w><C-j> :resize -2<CR>
-" nnoremap gf :NERDTreeToggle<CR>
-nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
-nnoremap <C-p> :FZF<CR>
-nnoremap <Space>cc :cd ~/Downloads/Code/MyFiles/.config<CR>
-nnoremap <Space>cl :cd ~/Downloads/Code/MyFiles/.local<CR>
-nnoremap <Space>ch :cd ~/.<CR>
-nnoremap <Space>cs :cd /<CR>
-nnoremap <Space>cd :cd ~/Downloads/Code/MyFiles/<CR>
-nnoremap <Space>cm :cd ~/.config/mutt/<CR>
-
-" nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
-
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '<+1<CR>gv-gv
-
-nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
-nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
-nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
-nnoremap <Space>a :source ~/.config/nvim/init.vim<CR>
-nnoremap <Space>gh :!groff -m ms % -T html > %.html<CR>
-vmap < <gv
-vmap > >gv
-"map <C-]> <C-[>
-
-"
-" Autocommands
-"
-
-autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
-autocmd Filetype markdown !pandoc -t ms -o %.pdf %
-autocmd BufWritePost *sh !shellcheck %
-autocmd BufWritePost *bspwmrc !shellcheck %
-autocmd InsertEnter * norm zz
-autocmd BufWritePre * %s/\s\+$//e
-autocmd User GoyoEnter nested call <SID>goyo_enter()
-autocmd User GoyoLeave nested call <SID>goyo_leave()
-autocmd Filetype sh !shellcheck %
-
-" autocmd! User GoyoEnter colorscheme torte
-" autocmd! User GoyoEnter sleep 5
-" autocmd! User GoyoEnter Limelight
-" autocmd! User GoyoLeave Limelight!
-" autocmd! User GoyoLeave colorscheme default
-
-"
-" Status Line
-"
-
-" funktions
-
-"function! StatuslineGit()
-"  	let l:branchname = GitBranch()
-"  	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-"endfunction
-
-set statusline=
-set statusline+=\ %M
-set statusline+=\ %F
-set statusline+=\ %r
-set statusline+=\ %y
-" set statusline+=%{StatuslineGit()}
-set statusline+=%=
-set statusline+=\ %l/%L:%c
-set statusline+=\ %p%%
-set statusline+=\ [%n]
-highlight StatusLine ctermfg=59
-
-" set statusline=
-" set statusline+=%#LineNr#
-" set statusline+=\ %a
-
-" hi User1 guifg=#eea040 guibg=#ffffff
-" hi User2 guifg=#dd3333 guibg=#ffffff
-" hi User3 guifg=#ff66ff guibg=#ffffff
-" hi User4 guifg=#a0ee40 guibg=#ffffff
-" hi User5 guifg=#eeee40 guibg=#ffffff
-
-
-"
-" Comands
-"
-
-command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
-command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
-command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
-command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
-command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
-command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
-command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
-command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
-command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
-command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
-command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
-
-" command Addressbook n ~/.config/abook/addressbook
-
-command! Q q
-command! W w
-command! Wq wq
-command! WQ wq
-
-"
-" General settings
-"
-
-set encoding=utf-8
-set splitbelow splitright
-set number relativenumber
-set ignorecase
-set smartcase
-set mouse=a
-
-
-filetype on
-filetype plugin on
-
-syntax on
-colorscheme torte
-
-highlight StatusLine ctermfg=59
-highlight Comment ctermfg=5
-
-"set relativenumber
-"set termguicolors
-"colorscheme default
-"highlight StatusLine ctermfg=101
-"highlight StatusLine ctermfg=102
+map ; <Plug>(easymotion-prefix)
