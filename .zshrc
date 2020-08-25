@@ -79,9 +79,9 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 PS1="$ "
 #Comp?? stuff
-# zstyle :compinstall filename '/home/christoph/.zshrc'
-# compinit
-# autoload -Uz compinit
+zstyle :compinstall filename '/home/christoph/.zshrc'
+compinit
+autoload -Uz compinit
 #Comp stop
 PATH=$PATH:~/.local/bin/
 
