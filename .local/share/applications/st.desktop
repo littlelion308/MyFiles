@@ -6,7 +6,6 @@ Icon=org.gnome.terminal
 Terminal=false
 Categories=System;TerminalEmulator;
 Keywords=shell;prompt;command;comandline;powerline;cmd;powershell
-
 Name=St
 GenericName=Terminal
 Comment=Just St
@@ -17,36 +16,47 @@ Actions=New;
 [Desktop Action New]
 Name=New Terminal
 Exec=/usr/bin/st
+
 [Desktop Action htop]
 Name=Start Htop
 Exec=/usr/bin/st htop
+
 [Desktop Action Text-Editor]
 Name=Start Text editor
 Exec=/usr/bin/st vi
+
 [Desktop Action calc]
 Name=start calc
 Exec=/usr/bin/st r
+
 [Desktop Action file-manager]
 Name=start File manager
 Exec=/usr/bin/st vifm
+
 [Desktop Action mail]
 Name=start mail
 Exec=/usr/bin/st neomutt
+
 [Desktop Action organizer]
 Name=start organizer
 Exec=/usr/bin/st calcurse
+
 [Desktop Action gotop]
 Name=start gotop
 Exec=/usr/bin/st gotop
+
 [Desktop Action adressbook]
 Name=start Adressbook
 Exec=/usr/bin/st abook
+
 [Desktop Action volume-mixer]
 Name=start Volumemixer
 Exec=/usr/bin/st pulsemixer
+
 [Desktop Action fm-tow]
 Name=start second File Manager
 Exec=/usr/bin/st lf
+
 [Desktop Action browser]
 Name=start TerminalBrowser
 Exec=/usr/bin/st lynx
