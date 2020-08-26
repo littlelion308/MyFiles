@@ -65,6 +65,7 @@ alias vf='vifm'
 #
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /usr/share/doc/find-the-command/ftc.zsh
 
 #
 #   Settings
@@ -78,11 +79,68 @@ unsetopt appendhistory
 bindkey -v
 # End of lines configured by zsh-newuser-install
 PS1="$ "
-#Comp?? stuff
-zstyle :compinstall filename '/home/christoph/.zshrc'
-compinit
+
+#
+# Comp?? stuff
+#
 autoload -Uz compinit
-#Comp stop
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zmodload zsh/complist
+# zstyle :compinstall filename '/home/christoph/.zshrc'
+compinit
+_comp_options+=(globdots)
+
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'left' vi-backward-char
+bindkey -M menuselect 'down' vi-down-line-or-history
+bindkey -M menuselect 'up' vi-up-line-or-history
+bindkey -M menuselect 'right' vi-forward-char
+
+bindkey "^?" backward-delete-char
+
+# Comp stop
+
+# Vi cursor fix
+
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+echo -ne '\e[5 q'
+precmd() { echo -ne '\e[5 q' ;}
+
+# More Vi Stuff
+# ci", ci', ci`, di", etc
+autoload -U select-quoted
+zle -N select-quoted
+for m in visual viopp; do
+  for c in {a,i}{\',\",\`}; do
+    bindkey -M $m $c select-quoted
+  done
+done
+
+# ci{, ci(, ci<, di{, etc
+autoload -U select-bracketed
+zle -N select-bracketed
+for m in visual viopp; do
+  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+    bindkey -M $m $c select-bracketed
+  done
+done
+
+
 PATH=$PATH:~/.local/bin/
 
 #
