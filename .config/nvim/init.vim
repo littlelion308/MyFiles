@@ -15,7 +15,7 @@ set splitbelow splitright
 syntax on
 
 "
-" Comands
+" Commands
 "
 
 command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
@@ -66,7 +66,7 @@ xnoremap J :move '<+1<CR>gv-gv
 xnoremap K :move '<-2<CR>gv-gv
 
 "
-" Autocommands
+" Auto commends
 "
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
@@ -95,7 +95,7 @@ set statusline+=\ [%n]
 highlight StatusLine ctermfg=59
 
 "
-" Comands
+" Commands
 "
 
 
@@ -115,7 +115,7 @@ command! W w
 command! WQ wq
 command! Wq wq
 "
-" Plugins
+" Plugging
 "
 
 call plug#begin()
@@ -141,7 +141,7 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "
-" Plugin settings
+" Plugging settings
 "
 
 " coc
