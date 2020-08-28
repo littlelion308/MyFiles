@@ -118,6 +118,7 @@ function zle-keymap-select {
   fi
 }
 zle -N zle-keymap-select
+
 echo -ne '\e[5 q'
 precmd() { echo -ne '\e[5 q' ;}
 
