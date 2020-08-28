@@ -41,11 +41,9 @@ command! Wq wq
 " nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
 " nnoremap gf :NERDTreeToggle<CR>
 " nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-nnoremap <C-p> :FZF<CR>
+
+nnoremap <C-p> :GFiles<CR>
+nnoremap <Leader>p :Files<CR>
 nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
@@ -60,11 +58,15 @@ nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
 nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
 nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
 nnoremap <Space>gh :!groff -m ms % -T html > %.html<CR>
-vmap < <gv
-vmap > >gv
+nnoremap Y y$
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+vnoremap < <gv
+vnoremap > >gv
 xnoremap J :move '<+1<CR>gv-gv
 xnoremap K :move '<-2<CR>gv-gv
-
 "
 " Auto commends
 "
@@ -122,7 +124,10 @@ call plug#begin()
 
 " Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
+
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf.vim',
