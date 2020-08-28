@@ -100,7 +100,7 @@ bindkey -M menuselect 'down' vi-down-line-or-history
 bindkey -M menuselect 'up' vi-up-line-or-history
 bindkey -M menuselect 'right' vi-forward-char
 
-bindkey "^?" backward-delete-char
+# bindkey "^?" backward-delete-char
 
 # Comp stop
 
