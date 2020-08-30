@@ -48,14 +48,15 @@ nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
-nnoremap <Space>c :cd ~/Downloads/Code/MyFiles/.config<CR>
-nnoremap <Space>h :cd ~/.<CR>
-nnoremap <Space>m :cd ~/.config/mutt/<CR>
-nnoremap <Space>s :cd /<CR>
-nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
-nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
-nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
-nnoremap <Space>gh :!groff -m ms % -T html > %.html<CR>
+nnoremap <Leader>c :cd ~/Downloads/Code/MyFiles/.config<CR>
+nnoremap <Leader>h :cd ~/.<CR>
+nnoremap <Leader>m :cd ~/.config/mutt/<CR>
+nnoremap <Leader>s :cd /<CR>
+nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
+nnoremap <Leader>e :setlocal spell! spelllang=en_us<CR>
+nnoremap <Leader>f :setlocal spell! spelllang=fr<CR>
+nnoremap <Leader>gh :!groff -m ms % -T html > %.html<CR>
+nnoremap <Leader>a :n Downloads/Code/MyFiles/.config/nvim/init.vim<CR>
 nnoremap Y y$
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
