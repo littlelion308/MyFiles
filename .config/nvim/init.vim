@@ -5,7 +5,7 @@ filetype on
 filetype plugin on
 highlight Comment ctermfg=5
 highlight StatusLine ctermfg=59
-let mapleader='\'
+let mapleader=' '
 set encoding=utf-8
 set ignorecase
 set mouse=a
