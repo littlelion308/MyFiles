@@ -48,12 +48,10 @@ nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
-nnoremap <Space>cc :cd ~/Downloads/Code/MyFiles/.config<CR>
-nnoremap <Space>cd :cd ~/Downloads/Code/MyFiles/<CR>
-nnoremap <Space>ch :cd ~/.<CR>
-nnoremap <Space>cl :cd ~/Downloads/Code/MyFiles/.local<CR>
-nnoremap <Space>cm :cd ~/.config/mutt/<CR>
-nnoremap <Space>cs :cd /<CR>
+nnoremap <Space>c :cd ~/Downloads/Code/MyFiles/.config<CR>
+nnoremap <Space>h :cd ~/.<CR>
+nnoremap <Space>m :cd ~/.config/mutt/<CR>
+nnoremap <Space>s :cd /<CR>
 nnoremap <Space>d :setlocal spell! spelllang=de_de<CR>
 nnoremap <Space>e :setlocal spell! spelllang=en_us<CR>
 nnoremap <Space>f :setlocal spell! spelllang=fr<CR>
@@ -189,6 +187,14 @@ endfunction
 
 map ; <Plug>(easymotion-prefix)
 
+" Vimiki
+
+
+    let wiki_1 = {}
+    let wiki_1.path = '~/Downloads/vimwiki'
+    let wiki_1.index = 'main'
+
+    let g:vimwiki_list = [wiki_1]
 
 "
 " Second Settings
