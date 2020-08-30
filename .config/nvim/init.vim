@@ -124,6 +124,7 @@ call plug#begin()
 " Plug 'vim/killersheep'
 
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'mattn/calendar-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
