@@ -96,10 +96,22 @@ set statusline+=\ [%n]
 highlight StatusLine ctermfg=59
 
 "
+" Funktions
+"
+
+" To Be done Tomorow...
+function! VimWiki2Pdf()
+	VimwikiAll2HTML
+	!pandoc -f html -t ms -o Downloads/vimwiki_html/main.pdf Downloads/vimwiki_html/main.html
+
+endfunction
+
+"
 " Commands
 "
 
 
+command! VimWiki2Pdf call VimWiki2Pdf()
 command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
 command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
