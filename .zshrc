@@ -55,6 +55,7 @@ alias nm='neomutt'
 alias q='exit'
 alias rl='source ~/.zshrc'
 alias v='vi'
+alias ddg='w3m duckduckgo.com'
 alias vf='vifm'
 
 #
