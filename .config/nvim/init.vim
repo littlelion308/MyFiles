@@ -15,6 +15,16 @@ set splitbelow splitright
 syntax on
 
 "
+" Funktions
+"
+function VimwikiMakeBulettPoint()
+	map a I- <Esc>
+	norm a
+endfunction
+
+
+
+"
 " Commands
 "
 
@@ -37,11 +47,7 @@ command! Wq wq
 "
 " Mappings
 "
-
-" nnoremap ga :vsplit ~/.local/share/char<CR>:vertical resize 20<CR>
-" nnoremap gf :NERDTreeToggle<CR>
-" nnoremap gf :left<CR>:vsp<CR>:Ntree<CR>:vertical resize 20<CR>
-
+nnoremap <Leader>- :call VimwikiMakeBulettPoint()<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>p :Files<CR>
 nnoremap <C-w><C-h> :vertical resize -2<CR>
@@ -95,30 +101,6 @@ set statusline+=\ %p%%
 set statusline+=\ [%n]
 highlight StatusLine ctermfg=59
 
-"
-" Funktions
-"
-
-"
-" Commands
-"
-
-
-command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
-command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
-command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
-command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
-command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
-command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
-command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
-command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
-command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
-command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
-command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
-command! Q q
-command! W w
-command! WQ wq
-command! Wq wq
 "
 " Plugging
 "
