@@ -40,7 +40,7 @@ dunst &
 feh --bg-scale Downloads/BG.png
 lxpolkit &
 numlockx on
-pasystray &
+# pasystray &
 sxhkd &
 volctl &
 # pa-applet &

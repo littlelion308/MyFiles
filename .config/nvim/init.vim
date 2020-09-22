@@ -23,7 +23,6 @@ function VimwikiMakeBulettPoint()
 endfunction
 
 
-
 "
 " Commands
 "
