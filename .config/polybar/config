@@ -26,6 +26,14 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+module_Desktop_Focust = #ffb52a
+module_Focust-xwin = #0a6c05
+module_Keyboard-Layout = #e60053
+module_Ram = #4bffdc
+module_Cpu = #f90000
+module_Wifi = #9f78e1
+module_Temp = #f50a4d
+module_Date = #0a0cc5
 
 [bar/mybarBb]
 monitor = ${env:MONITOR:}
@@ -230,7 +238,7 @@ cursor-scroll = ns-resize
 type = custom/script
 exec = date
 tail = true
-format-underline = #0a0cc5
+format-underline = ${colors.module_Date}
 click-left = notify-send "" "The time is $(date)"
 
 [module/mypower]
@@ -251,7 +259,8 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix-underline = ${colors.module_Keyboard}
+
 
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
@@ -276,7 +285,7 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.module_Desktop_Focust}
 label-focused-padding = 2
 
 label-occupied = %index%
@@ -309,7 +318,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.module_Desktop_Focust}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -371,7 +380,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.module_Cpu}
 label = %percentage:2%%
 
 [module/memory]
@@ -379,7 +388,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${colors.module_Ram}
 label = %percentage_used%%
 
 [module/wlan]
@@ -388,7 +397,7 @@ interface = wlp4s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.module_Wifi}
 label-connected = %essid%
 
 format-disconnected =
