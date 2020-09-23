@@ -251,7 +251,7 @@ click-left = ~/.local/bin/rofishutdown.sh
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:69...%
-format-underline = #0a6c05
+format-underline = ${colors.module_Focust-xwin}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -259,16 +259,16 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.module_Keyboard}
+format-prefix-underline = ${colors.module_Keyboard-Layout}
 
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.module_Keyboard-Layout}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label-indicator-underline = ${colors.module_Keyboard-Layout}
 
 [module/filesystem]
 type = internal/fs
