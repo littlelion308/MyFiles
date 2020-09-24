@@ -110,7 +110,6 @@ call plug#begin()
 " Plug 'vim/killersheep'
 
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'mattn/calendar-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
@@ -119,9 +118,11 @@ Plug 'junegunn/fzf.vim',
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'kovetskiy/sxhkd-vim'
+Plug 'mattn/calendar-vim'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -172,7 +173,7 @@ endfunction
 
 " Easymotion
 
-map ; <Plug>(easymotion-prefix)
+map \ <Plug>(easymotion-prefix)
 
 " Vimiki
 
