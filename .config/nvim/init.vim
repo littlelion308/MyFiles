@@ -194,28 +194,27 @@ endfunction
 map \ <Plug>(easymotion-prefix)
 
 " Vimiki
-	map <Leader>ww :VimwikiIndex<CR>:cd Downloads/vimwiki<CR>
+map <Leader>ww :VimwikiIndex<CR>:cd Downloads/vimwiki<CR>
 
+let wiki_1 = {}
+let wiki_1.path = '~/Downloads/vimwiki'
+let wiki_1.index = 'main'
 
-    let wiki_1 = {}
-    let wiki_1.path = '~/Downloads/vimwiki'
-    let wiki_1.index = 'main'
-
-    let g:vimwiki_list = [wiki_1]
+let g:vimwiki_list = [wiki_1]
 
 " vim-hexokinase
 "
 let g:Hexokinase_refreshEvents = ['InsertLeave']
 
 let g:Hexokinase_optInPatterns = [
-\     'full_hex',
-\     'triple_hex',
-\     'rgb',
-\     'rgba',
-\     'hsl',
-\     'hsla',
-\     'colour_names'
-\ ]
+			\     'full_hex',
+			\     'triple_hex',
+			\     'rgb',
+			\     'rgba',
+			\     'hsl',
+			\     'hsla',
+			\     'colour_names'
+			\ ]
 
 let g:Hexokinase_highlighters = ['backgroundfull']
 
