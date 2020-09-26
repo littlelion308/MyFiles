@@ -27,9 +27,9 @@ function MarkdownMakeHeader()
 	norm ,qMarkdownMakeHeader
 endfunction
 
-function WimwikiAddHeader()
-	map ,qWimwikiAddHeader I=<Esc>A=<Esc>
-	norm ,qWimwikiAddHeader
+function VimwikiAddHeader()
+	map ,qVimwikiAddHeader I=<Esc>A=<Esc>
+	norm ,qVimwikiAddHeader
 endfunction
 
 function VimwikiMakeHeader()
