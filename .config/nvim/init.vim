@@ -22,6 +22,20 @@ function VimwikiMakeBulettPoint()
 	norm a
 endfunction
 
+function MarkdownMakeHeader()
+	map a I#<Esc>
+	norm a
+endfunction
+
+function WimwikiAddHeader()
+	map a I=<Esc>A=<Esc>
+	norm a
+endfunction
+
+function VimwikiMakeHeader()
+	map a I= <Esc>A =<Esc>
+	norm a
+endfunction
 
 "
 " Commands
@@ -46,6 +60,7 @@ command! Wq wq
 "
 " Mappings
 "
+nnoremap <Leader>t :call MarkdownMakeHeader()<CR>
 nnoremap <Leader>- :call VimwikiMakeBulettPoint()<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>p :Files<CR>
@@ -61,7 +76,7 @@ nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
 nnoremap <Leader>e :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>f :setlocal spell! spelllang=fr<CR>
 nnoremap <Leader>gh :!groff -m ms % -T html > %.html<CR>
-nnoremap <Leader>a :n Downloads/Code/MyFiles/.config/nvim/init.vim<CR>
+nnoremap <Leader>a :n ~/Downloads/Code/MyFiles/.config/nvim/init.vim<CR>
 nnoremap Y y$
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -78,6 +93,7 @@ xnoremap K :move '<-2<CR>gv-gv
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
 autocmd Filetype markdown !pandoc -t ms -o %.pdf %
+autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
 autocmd BufWritePost *sh !shellcheck %
 autocmd BufWritePost *bspwmrc !shellcheck %
 autocmd InsertEnter * norm zz
