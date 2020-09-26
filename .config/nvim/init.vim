@@ -194,6 +194,7 @@ endfunction
 map \ <Plug>(easymotion-prefix)
 
 " Vimiki
+	map <Leader>ww :VimwikiIndex<CR>:cd Downloads/vimwiki<CR>
 
 
     let wiki_1 = {}
