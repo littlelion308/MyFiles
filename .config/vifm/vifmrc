@@ -499,3 +499,5 @@ map gp :!dragon-drag-and-drop -ax %f <CR>
 map gP :!dragon-drag-and-drop -ak %f <CR>
 map gi :!dragon-drag-and-drop -t <CR>
 " map gi :!dragon-drag-and-drop -tk %d <CR>
+nmap n :mkdir RnameMeWithcw <CR>
+nmap N :touch RnameMeWithcw.txt <CR>
