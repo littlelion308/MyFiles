@@ -100,7 +100,7 @@ autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePre * %s/\s\+$//e
 autocmd Filetype markdown !pandoc -t ms -o %.pdf %
 autocmd Filetype sh !shellcheck %
-autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
+" autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
 autocmd InsertEnter * norm zz
 
 "
@@ -146,6 +146,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
 
@@ -194,11 +195,12 @@ endfunction
 map \ <Plug>(easymotion-prefix)
 
 " Vimiki
-map <Leader>ww :VimwikiIndex<CR>:cd Downloads/vimwiki<CR>
+map <Leader>ww :VimwikiIndex<CR>:cd ~/Downloads/vimwiki<CR>
 
 let wiki_1 = {}
 let wiki_1.path = '~/Downloads/vimwiki'
 let wiki_1.index = 'main'
+let wiki_1.auto_tags = 1
 
 let g:vimwiki_list = [wiki_1]
 
