@@ -140,7 +140,7 @@ for m in visual viopp; do
 done
 
 
-PATH=$PATH:~/.local/bin/
+PATH=$PATH:~/Downloads/Code/MyFiles/.local/bin/
 
 #
 #   Startup
