@@ -18,23 +18,23 @@ syntax on
 " Funktions
 "
 function VimwikiMakeBulettPoint()
-	map a I- <Esc>
-	norm a
+	map ,qVimwikiMakeBulettPoint I- <Esc>
+	norm ,qVimwikiMakeBulettPoint
 endfunction
 
 function MarkdownMakeHeader()
-	map a I#<Esc>
-	norm a
+	map ,qMarkdownMakeHeader I#<Esc>
+	norm ,qMarkdownMakeHeader
 endfunction
 
 function WimwikiAddHeader()
-	map a I=<Esc>A=<Esc>
-	norm a
+	map ,qWimwikiAddHeader I=<Esc>A=<Esc>
+	norm ,qWimwikiAddHeader
 endfunction
 
 function VimwikiMakeHeader()
-	map a I= <Esc>A =<Esc>
-	norm a
+	map ,qVimwikiMakeHeader I= <Esc>A =<Esc>
+	norm ,qVimwikiMakeHeader
 endfunction
 
 "
