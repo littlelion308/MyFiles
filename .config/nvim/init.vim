@@ -60,6 +60,7 @@ command! Wq wq
 "
 " Mappings
 "
+
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-w><C-h> :vertical resize -2<CR>
 nnoremap <C-w><C-j> :resize -2<CR>
@@ -77,7 +78,7 @@ nnoremap <Leader>h :cd ~/.<CR>
 nnoremap <Leader>m :cd ~/.config/mutt/<CR>
 nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>s :cd /<CR>
-nnoremap <Leader>t :call MarkdownMakeHeader()<CR>
+nnoremap <Leader>t :Tags<CR>
 nnoremap Y y$
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -88,10 +89,12 @@ vnoremap > >gv
 vnoremap S :sort<CR>gv
 xnoremap J :move '<+1<CR>gv-gv
 xnoremap K :move '<-2<CR>gv-gv
+
 "
 " Auto commends
 "
 
+" autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
 autocmd BufWritePost *.ms !groff -t -m ms % -T pdf > %.pdf
 autocmd BufWritePost *bspwmrc !shellcheck %
 autocmd BufWritePost *init.vim source ~/.config/nvim/init.vim
@@ -100,7 +103,6 @@ autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePre * %s/\s\+$//e
 autocmd Filetype markdown !pandoc -t ms -o %.pdf %
 autocmd Filetype sh !shellcheck %
-" autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
 autocmd InsertEnter * norm zz
 
 "
@@ -124,6 +126,7 @@ set statusline=
 
 call plug#begin()
 
+" Plug 'jremmen/vim-ripgrep'
 " Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
 
@@ -146,7 +149,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
-Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
 
