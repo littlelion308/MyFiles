@@ -17,6 +17,7 @@ export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 # $PATH=$PATH:~/.local/bin
 
