@@ -146,5 +146,8 @@ PATH=$PATH:~/Downloads/Code/MyFiles/.local/bin/
 #
 #   Startup
 #
+source ~/.zprofile
+
 
 ufetch
+

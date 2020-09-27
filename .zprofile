@@ -21,7 +21,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 # $PATH=$PATH:~/.local/bin
 
-source ~/.config/zsh/.zshrc
+# source ~/.config/zsh/.zshrc
 
 
 # autostart tmux
