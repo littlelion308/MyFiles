@@ -55,7 +55,7 @@ alias ls="ls --color=always"
 alias nf='neofetch'
 alias nm='neomutt'
 alias q='exit'
-alias rl='source ~/.zshrc'
+alias rl='source ~/.zprofile'
 alias v='vi'
 alias vf='vifm'
 
