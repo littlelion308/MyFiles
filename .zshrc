@@ -63,8 +63,8 @@ alias vf='vifm'
 #    Plugins
 #
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/doc/find-the-command/ftc.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# source /usr/share/doc/find-the-command/ftc.zsh
 
 #
 #   Settings
