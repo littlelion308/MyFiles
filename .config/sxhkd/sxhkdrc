@@ -89,7 +89,7 @@ super + shift + w
 	~/.local/bin/scriptedit.sh
 
 super + shift + p
-	passmenu
+	PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
 	 # dash -c /home/christoph/.local/bin/passer.sh m
 
 # close and kill
