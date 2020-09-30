@@ -102,6 +102,9 @@ super + z
 super + o
 	~/.local/bin/shower.sh
 
+super + shift + ctrl + l
+	xsecurelock
+
 
 
 #
