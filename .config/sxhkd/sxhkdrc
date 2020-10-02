@@ -26,7 +26,7 @@ super + shift + t
 	pkill -USR1 -x sxhkd
 
 super + shift + f
-	firefox
+	qutebrowser
 
 # super + shift + f
 # 	qutebrowser
