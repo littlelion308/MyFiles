@@ -15,11 +15,12 @@ set splitbelow splitright
 syntax on
 
 "
-" Funktions
+" Functions
 "
-function VimwikiMakeBulettPoint()
-	map ,qVimwikiMakeBulettPoint I- <Esc>
-	norm ,qVimwikiMakeBulettPoint
+
+function VimwikiMakeBulletedPoint()
+	map ,qVimwikiMakePoint I- <Esc>
+	norm ,qVimwikiMakePoint
 endfunction
 
 function MarkdownMakeHeader()
@@ -41,7 +42,7 @@ endfunction
 " Commands
 "
 
-command! Addressbook n ~/Downloads/Code/MyFiles/.config/abook/addressbook
+command! Addressbook n ~/Downloads/Code/MyFiles/.local/share/abook/addressbook
 command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
@@ -67,7 +68,7 @@ nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
 nnoremap <C-w>t :tabedit %<CR>
-nnoremap <Leader>- :call VimwikiMakeBulettPoint()<CR>
+nnoremap <Leader>- :call VimwikiMakeBulletedPoint()<CR>
 nnoremap <Leader>a :n ~/Downloads/Code/MyFiles/.config/nvim/init.vim<CR>
 nnoremap <Leader>c :cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
