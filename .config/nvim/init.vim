@@ -1,6 +1,6 @@
 " General settings
 "
-colorscheme torte
+colorscheme slate
 filetype on
 filetype plugin on
 highlight Comment ctermfg=5
