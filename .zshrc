@@ -87,7 +87,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zmodload zsh/complist
 # zstyle :compinstall filename '/home/christoph/.zshrc'
-compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 bindkey -M menuselect 'h' vi-backward-char
