@@ -2,6 +2,7 @@
 export EDITOR="vi"
 export TERMINAL="alacritty"
 export TERM="alacritty"
+export LANG="en_US-UFT-8"
 export BROWSER="firefox"
 export READER="zathura"
 export LESSHISTFILE="-"
