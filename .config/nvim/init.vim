@@ -5,6 +5,7 @@ filetype on
 filetype plugin on
 highlight Comment ctermfg=5
 highlight StatusLine ctermfg=59
+let g:limelight_conceal_ctermfg=8
 let mapleader=' '
 set encoding=utf-8
 set ignorecase
@@ -131,6 +132,7 @@ call plug#begin()
 " Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
 
+Plug 'vifm/vifm.vim'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
