@@ -1,5 +1,6 @@
 configuration {
-	modi: [windowcd, window, run, ssh, drun, combi, keys];
+	modi: [ windowcd, window, run, ssh, drun, combi, keys];
+	/* modi: [ windowcd, window, run, ssh, drun, combi, keys, clip:greenclip]; */
 	width: 90;
 	lines: 30;
 	columns: 4;
@@ -9,6 +10,7 @@ configuration {
 	drun-match-fields: [all];
 	/* drun-display-format: {name} [<span weight='light' size='small'><i>({generic})</i></span>] {category} {exec}; */
 	window-match-fields: [all];
+	/* drun-show-actions: true; */
 	/* monitor: "-2"; */
 }
 @import "/usr/share/rofi/themes/Adapta-Nokto.rasi"

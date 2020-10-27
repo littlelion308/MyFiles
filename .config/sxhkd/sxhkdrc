@@ -21,6 +21,9 @@ super + shift + d
 	rofi -show run
 
 
+super + shift + c
+	rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
+
 # make sxhkd reload its configuration files:
 super + shift + t
 	pkill -USR1 -x sxhkd
