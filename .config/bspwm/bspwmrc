@@ -41,7 +41,7 @@ teams &
 greenclip daemon&
 dunst &
 lxpolkit &
-sxhkd &
+~/.config/dxhd/dxhd.sh &
 volctl &
 # pasystray &
 # pa-applet &

@@ -48,16 +48,16 @@ command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
 command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
+command! Q q
 command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
 command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
 command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
 command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
-command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
-command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
-command! Q q
 command! W w
 command! WQ wq
 command! Wq wq
+command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
+command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
 
 "
 " Mappings
@@ -89,11 +89,12 @@ noremap <C-l> <C-w>l
 vnoremap < <gv
 vnoremap > >gv
 vnoremap S :sort<CR>gv
+nnoremap gf :Vifm<CR>
 xnoremap J :move '<+1<CR>gv-gv
 xnoremap K :move '<-2<CR>gv-gv
 
 "
-" Auto commends
+" Auto commands
 "
 
 " autocmd Filetype vimwiki !pandoc -t ms -o %.pdf %
@@ -132,7 +133,6 @@ call plug#begin()
 " Plug 'preservim/nerdtree'
 " Plug 'vim/killersheep'
 
-Plug 'vifm/vifm.vim'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
@@ -151,6 +151,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vifm/vifm.vim'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
