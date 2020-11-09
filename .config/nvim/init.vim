@@ -48,6 +48,9 @@ command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
 command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
+command! DxhdProgramms n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd-programs.sh
+command! DxhdBspwm n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd-bspwm.sh
+command! Dxhd n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh
 command! Q q
 command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
 command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc

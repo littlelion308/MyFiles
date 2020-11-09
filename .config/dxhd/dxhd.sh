@@ -1,3 +1,4 @@
 #!/bin/sh
 dxhd -c ~/.config/dxhd/dxhd-programs.sh
-sxhkd
+dxhd -c ~/.config/dxhd/dxhd-bspc.sh
+# sxhkd
