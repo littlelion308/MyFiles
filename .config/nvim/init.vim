@@ -48,8 +48,6 @@ command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
 command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
-command! DxhdProgramms n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd-programs.sh
-command! DxhdBspwm n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd-bspwm.sh
 command! Dxhd n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh
 command! Q q
 command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
@@ -106,6 +104,7 @@ autocmd BufWritePost *bspwmrc !shellcheck %
 autocmd BufWritePost *init.vim source ~/.config/nvim/init.vim
 autocmd BufWritePost *sh !shellcheck %
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+autocmd BufWritePost ~/.config/dxhd/dxhd.sh !dxhd -r
 autocmd BufWritePre * %s/\s\+$//e
 autocmd Filetype markdown !pandoc -t ms -o %.pdf %
 autocmd Filetype sh !shellcheck %

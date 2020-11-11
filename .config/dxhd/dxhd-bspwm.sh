@@ -11,8 +11,11 @@
 # super + m
 bspc desktop -l next
 
-# super + {_,shift + }{h,j,k,l}
-bspc node -{f,s} {west,south,north,east}
+# super + {_,shift + } + {h,j,k,l}
+bspc node -s {west,south,north,east}
+
+# super + {h,j,k,l}
+bspc node -f {west,south,north,east}
 
 # super + {t,shift space,f}
 bspc node -t {tiled,floating,fullscreen}

@@ -41,8 +41,12 @@ teams &
 greenclip daemon&
 dunst &
 lxpolkit &
-~/.config/dxhd/dxhd.sh &
+dxhd &
+# dxhd -b -c Downloads/Code/MyFiles/.config/dxhd/dxhd-programs.sh &
+# dxhd -b -c Downloads/Code/MyFiles/.config/dxhd/dxhd-bspwm.sh &
+# sxhkd &
 volctl &
+alacritty &
 # pasystray &
 # pa-applet &
 

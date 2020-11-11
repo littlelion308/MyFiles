@@ -2,7 +2,6 @@
 
 ## $TERM -t Vifm -e vifm
 GenericTermName=Terminal
-AltTerm=st
 LAUNCHER=rofi
 
 ###
@@ -12,55 +11,55 @@ LAUNCHER=rofi
 ## TERMINALS
 
 # super + Return
-$TERM -t $GenericTermName
+alacritty -t Terminal
 
 # super + KP_Enter
-$TERM -t $GenericTermName
+alacritty -t $GenericTermName
 
 # super + shift + Return
-$AltTerm
+st
 
 # super + shift + KP_Enter
-$AltTerm
+st
 
 
 # super + semicolon
-$TERM -t "$FM" -e "$FM"
+alacritty -t vifm -e "$FM"
 
 # super + apostrophe
-$TERM -t "$EDITOR" -e "$EDITOR"
+alacritty -t vi -e "$EDITOR"
 
 # super + backslash
-$TERM -t R -e R
+alacritty -t R -e R
 
 
 # super + shift + semicolon
-$TERM -t "$TASKMANAGER" -e "$TASKMANAGER"
+alacritty -t htop -e "$TASKMANAGER"
 
 # super + shift + apostrophe
-$TERM -t "$EMAILCLIENT" -e "$EMAILCLIENT"
+alacritty -t neomutt -e "$EMAILCLIENT"
 
 # super + shift + backslash
-$TERM -t "$CALENDER" -e "$CALENDER"
+alacritty -t calcurse -e "$CALENDER"
 
 
 ## Launchers
 
 
 # super + d
-$LAUNCHER -show combi
+rofi -show combi
 
 # super + shift + d
-$LAUNCHER -show run
+rofi -show run
 
 # super + Tab
-$LAUNCHER -show window
+rofi -show window
 
 # super + shift + Tab
-$LAUNCHER -show windowcd
+rofi -show windowcd
 
 # super + shift + c
-$LAUNCHER -modi "clip:greenclip print" -show clip -run-command '{cmd}'
+rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
 
 
 ## Scripts
@@ -73,10 +72,10 @@ $LAUNCHER -modi "clip:greenclip print" -show clip -run-command '{cmd}'
 ~/Downloads/Code/MyFiles/.local/bin/rofiunicode.sh
 
 # super + shift + {e,s}
-~/.local/bin/rofishutdown.sh
+~/Downloads/Code/MyFiles/.local/bin/rofishutdown.sh {a, b}
 
 # {super + p, XF86Display}
-~/.local/bin/displyhandler.sh
+~/Downloads/Code/MyFiles/.local/bin/displyhandler.sh {a, b}
 
 
 # super + shift + p
@@ -90,7 +89,7 @@ PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
 
 
 # super + shift + f
-$BROWSER
+qutebrowser
 
 # XF86AudioRaiseVolume
 pulseaudio-ctl up
@@ -102,7 +101,7 @@ pulseaudio-ctl down
 pulseaudio-ctl mute
 
 # {super + w, Print}
-flameshot gui
+flameshot {gui, gui}
 
 # super + z
 zathura
@@ -110,9 +109,11 @@ zathura
 # super + shift + ctrl + l
 xsecurelock
 
-# super + shift {_,ctrl + }q
+# super + shift + q
 xdo {close, kill}
 
+# super + shift + ctrl + q
+xdo {close, kill}
 
 
 
