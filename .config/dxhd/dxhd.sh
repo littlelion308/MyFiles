@@ -3,7 +3,7 @@
 # super + shift + ctrl + alt + q + w + e r + t + y + u + i + o + p + a
 echo "You pressed a Lot of Keys"
 
-# mouse1
+## mouse1
 ##alacritty
 ## dxhd -c ~/.config/dxhd/dxhd-programs.sh
 ## dxhd -c ~/.config/dxhd/dxhd-bspc.sh
@@ -22,7 +22,7 @@ LAUNCHER=rofi
 alacritty -t Terminal
 
 # super + KP_Enter
-alacritty -t $GenericTermName
+alacritty -t Terminal
 
 # super + shift + Return
 st
@@ -35,7 +35,7 @@ st
 alacritty -t Vifm -e vifm
 
 # super + apostrophe
-alacritty -t Vi -e NVim
+alacritty -t NVim -e nvim
 
 # super + backslash
 alacritty -t R -e R
@@ -45,10 +45,10 @@ alacritty -t R -e R
 alacritty -t Htop -e htop
 
 # super + shift + apostrophe
-alacritty -t neomutt -e neomutt
+alacritty -t Neomutt -e neomutt
 
 # super + shift + backslash
-alacritty -t calcurse -e calcurse
+alacritty -t Calcurse -e calcurse
 
 
 ## Launchers
@@ -131,11 +131,8 @@ xdo {close, kill}
 # super + m
 bspc desktop -l next
 
-# super + {_,shift + } + {h,j,k,l}
-bspc node -{f, s} {west,south,north,east}
-
-## super + {h,j,k,l}
-## bspc node -f {west,south,north,east}
+# super + {_,shift + }{h,j,k,l}
+bspc node -{f, s} '{west,south,north,east}'
 
 # super + {t,shift + space,f}
 bspc node -t {tiled,floating,fullscreen}
