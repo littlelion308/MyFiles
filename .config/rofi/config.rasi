@@ -1,16 +1,9 @@
+/** Configured For Applets **/
+
 configuration {
-	modi: [ windowcd, window, run, ssh, drun, combi, keys];
-	/* modi: [ windowcd, window, run, ssh, drun, combi, keys, clip:greenclip]; */
-	width: 90;
-	lines: 30;
-	columns: 4;
-	show-icons: true;
-	combi-modi: [drun, ssh, window];
-	theme: "Adapta-Nokto";
-	drun-match-fields: [all];
-	/* drun-display-format: {name} [<span weight='light' size='small'><i>({generic})</i></span>] {category} {exec}; */
-	window-match-fields: [all];
-	/* drun-show-actions: true; */
-	/* monitor: "-2"; */
+  show-icons:         true;
+  icon-theme:         "Papirus";
+  location: 5;
+  yoffset: -50;
+  xoffset: -20;
 }
-@import "/usr/share/rofi/themes/Adapta-Nokto.rasi"
