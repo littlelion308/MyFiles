@@ -38,7 +38,7 @@ alacritty -t Vifm -e vifm
 alacritty -t NVim -e nvim
 
 # super + backslash
-alacritty -t R -e R
+rofi -show calc -modi calc -no-show-match -no-sort
 
 
 # super + shift + semicolon
@@ -127,6 +127,12 @@ xdo {close, kill}
 
 # super + shift + mouse1
 bspc node -t floating
+
+# super + shift + ctrl + mouse1
+rofi -show calc -modi calc -no-show-match -no-sort
+
+
+
 
 # super + ctrl + shift + {e,s}
 { bspc quit, shutdown 0}
