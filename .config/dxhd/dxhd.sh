@@ -83,7 +83,7 @@ rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
 ~/Downloads/Code/MyFiles/.local/bin/rofishutdown.sh {a, b}
 
 # {super + p, XF86Display}
-~/Downloads/Code/MyFiles/.local/bin/displyhandler.sh {a, b}
+rofi-autorandr {a, b}
 
 
 # super + shift + p
@@ -124,6 +124,9 @@ xdo {close, kill}
 ### Bspwm Hotkeys
 ###
 
+
+# super + shift + mouse1
+bspc node -t floating
 
 # super + ctrl + shift + {e,s}
 { bspc quit, shutdown 0}
