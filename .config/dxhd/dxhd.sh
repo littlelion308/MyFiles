@@ -69,6 +69,15 @@ rofi -show windowcd
 # super + shift + c
 rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
 
+# super + i
+rofi -show emoji -modi emoji
+
+# {super + p, XF86Display}
+rofi-autorandr {a, b}
+
+# super + shift + p
+PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
+
 
 ## Scripts
 
@@ -76,18 +85,10 @@ rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
 # super + a
 ~/Downloads/Code/MyFiles/.local/bin/greenclear.sh
 
-# super + i
-~/Downloads/Code/MyFiles/.local/bin/rofiunicode.sh
 
 # super + shift + {e,s}
 ~/Downloads/Code/MyFiles/.local/bin/rofishutdown.sh {a, b}
 
-# {super + p, XF86Display}
-rofi-autorandr {a, b}
-
-
-# super + shift + p
-PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
 
 # super + o
 ~/.local/bin/shower.sh
@@ -127,12 +128,6 @@ xdo {close, kill}
 
 # super + shift + mouse1
 bspc node -t floating
-
-# super + shift + ctrl + mouse1
-rofi -show calc -modi calc -no-show-match -no-sort
-
-
-
 
 # super + ctrl + shift + {e,s}
 { bspc quit, shutdown 0}
