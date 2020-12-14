@@ -76,7 +76,6 @@ nnoremap <Leader>c :cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
 nnoremap <Leader>e :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>f :setlocal spell! spelllang=fr<CR>
-nnoremap <Leader>gh :!groff -m ms % -T html > %.html<CR>
 nnoremap <Leader>h :cd ~/.<CR>
 nnoremap <Leader>m :cd ~/.config/mutt/<CR>
 nnoremap <Leader>p :Files<CR>
