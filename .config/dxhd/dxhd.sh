@@ -100,6 +100,18 @@ PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
 # super + shift + f
 qutebrowser
 
+# super + shift + Up
+pulseaudio-ctl up
+
+# super + shift + Down
+pulseaudio-ctl down
+
+# super + shift + Right
+pulseaudio-ctl mute
+
+# super + shift + Left
+pulseaudio-ctl mute
+
 # XF86AudioRaiseVolume
 pulseaudio-ctl up
 

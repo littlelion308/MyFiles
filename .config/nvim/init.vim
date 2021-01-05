@@ -59,6 +59,7 @@ command! WQ wq
 command! Wq wq
 command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
 command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
+command! Vf Vifm
 
 "
 " Mappings
@@ -71,7 +72,7 @@ nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
 nnoremap <C-w>t :tabedit %<CR>
 nnoremap <Leader>- :call VimwikiMakeBulletedPoint()<CR>
-nnoremap <Leader>a :n ~/Downloads/Code/MyFiles/.config/nvim/init.vim<CR>
+nnoremap <Leader>a :n ~/Downloads/Code/MyFiles/.config/nvim/init.vim<CR>:cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>c :cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
 nnoremap <Leader>e :setlocal spell! spelllang=en_us<CR>
