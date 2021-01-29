@@ -136,8 +136,8 @@ xdo {close, kill}
 # super + shift + ctrl + k
 ~/Downloads/Code/MyFiles/.local/bin/rofiKBswitcher.sh
 
-# super + r + {h,j,k,l}
-xdotool mousemove_relative {-10 0, 0 10, 0 -10, 10 0}
+# super + ctrl + alt + {h,j,k,l} + {_,shift}
+xdotool mousemove_relative -p {270,180,0,90} {10,75}
 
 
 ###
