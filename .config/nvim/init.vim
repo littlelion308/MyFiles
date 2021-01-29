@@ -5,6 +5,7 @@ filetype on
 filetype plugin on
 highlight Comment ctermfg=5
 highlight StatusLine ctermfg=59
+highlight Search ctermfg=0
 let g:limelight_conceal_ctermfg=8
 let mapleader=' '
 set encoding=utf-8
