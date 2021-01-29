@@ -136,6 +136,10 @@ xdo {close, kill}
 # super + shift + ctrl + k
 ~/Downloads/Code/MyFiles/.local/bin/rofiKBswitcher.sh
 
+# super + r + {h,j,k,l}
+xdotool mousemove_relative {-10 0, 0 10, 0 -10, 10 0}
+
+
 ###
 ### Bspwm Hotkeys
 ###
@@ -204,5 +208,5 @@ bspc node -p cancel
 bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 ## move a floating window
-# super + {Left,Down,Up,Right}
+# super + {Left,Down,Up,:ight}
 bspc node -v {-20 0,0 20,0 -20,20 0}
