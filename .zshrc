@@ -59,6 +59,8 @@ alias q='exit'
 alias rl='source ~/.zprofile'
 alias v='vi'
 alias vf='vifm'
+alias pmmu='ponymix move alsa_output.usb-Logitech_Logitech_USB_Headset_000000000000-00.analog-stereo -t sink-input'
+alias pmmm='ponymix move alsa_output.pci-0000_01_05.1.hdmi-stereo -t sink-input'
 
 #
 #    Plugins

@@ -139,6 +139,8 @@ xdo {close, kill}
 # super + ctrl + alt + {h,j,k,l} + {_,shift}
 xdotool mousemove_relative -p {270,180,0,90} {10,75}
 
+# super + {q,e,t,r}
+xdotool click {1,3,4,5}
 
 ###
 ### Bspwm Hotkeys

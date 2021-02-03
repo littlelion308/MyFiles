@@ -14,6 +14,8 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" 317 {0,0,0,0,1,3,2}
 numlockx on
 feh --bg-scale Downloads/BG.png
 
+ponymix --card alsa_card.pci-0000_01_05.1 set-profile  output:hdmi-stereo
+
 # Config
 
 bspc config border_width         2

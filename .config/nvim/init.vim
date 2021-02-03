@@ -84,6 +84,7 @@ nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>s :cd /<CR>
 nnoremap <Leader>t :Tags<CR>
 nnoremap Y y$
+nnoremap gn :nohlsearch<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
