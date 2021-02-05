@@ -239,3 +239,4 @@ autocmd VimEnter * HexokinaseTurnOn
 "
 
 highlight Comment ctermfg=5
+highlight Search ctermfg=0
