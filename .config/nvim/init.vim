@@ -4,14 +4,15 @@ colorscheme slate
 filetype on
 filetype plugin on
 highlight Comment ctermfg=5
-highlight StatusLine ctermfg=59
 highlight Search ctermfg=0
+highlight StatusLine ctermfg=59
 let g:limelight_conceal_ctermfg=8
 let mapleader=' '
 set encoding=utf-8
 set ignorecase
 set mouse=a
 set number relativenumber
+set scrolloff=8
 set smartcase
 set splitbelow splitright
 syntax on
