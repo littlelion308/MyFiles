@@ -1,5 +1,6 @@
 " General settings
 "
+
 colorscheme slate
 filetype on
 filetype plugin on
@@ -8,6 +9,7 @@ highlight Search ctermfg=0
 highlight StatusLine ctermfg=59
 let g:limelight_conceal_ctermfg=8
 let mapleader=' '
+set colorcolumn=80
 set encoding=utf-8
 set ignorecase
 set mouse=a
