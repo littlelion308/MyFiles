@@ -47,7 +47,7 @@ endfunction
 " Commands
 "
 
-command! Addressbook n ~/Downloads/Code/MyFiles/.local/share/abook/addressbook
+command! Addressbook n ~/.local/share/abook/addressbook
 command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
