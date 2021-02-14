@@ -33,16 +33,6 @@ function MarkdownMakeHeader()
 	norm ,qMarkdownMakeHeader
 endfunction
 
-function VimwikiAddHeader()
-	map ,qVimwikiAddHeader I=<Esc>A=<Esc>
-	norm ,qVimwikiAddHeader
-endfunction
-
-function VimwikiMakeHeader()
-	map ,qVimwikiMakeHeader I= <Esc>A =<Esc>
-	norm ,qVimwikiMakeHeader
-endfunction
-
 "
 " Commands
 "
@@ -137,11 +127,15 @@ set statusline=
 
 call plug#begin()
 
+
 " Plug 'jremmen/vim-ripgrep'
+" Plug 'kovetskiy/sxhkd-vim'
 " Plug 'preservim/nerdtree'
+" Plug 'scrooloose/syntastic'
 " Plug 'vim/killersheep'
 
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
@@ -149,11 +143,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf.vim',
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'kovetskiy/sxhkd-vim'
 Plug 'mattn/calendar-vim'
-Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
