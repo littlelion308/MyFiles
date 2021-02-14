@@ -40,12 +40,13 @@ endfunction
 command! Addressbook n ~/.local/share/abook/addressbook
 command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
 command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
+command! Dxhd n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh
 command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
 command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
-command! Dxhd n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh
 command! Q q
 command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
 command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
+command! Vf Vifm
 command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
 command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
 command! W w
@@ -53,7 +54,6 @@ command! WQ wq
 command! Wq wq
 command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
 command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
-command! Vf Vifm
 
 "
 " Mappings
@@ -65,7 +65,6 @@ nnoremap <C-w><C-j> :resize -2<CR>
 nnoremap <C-w><C-k> :resize +2<CR>
 nnoremap <C-w><C-l> :vertical resize +2<CR>
 nnoremap <C-w>t :tabedit %<CR>
-nnoremap <Leader>- :call VimwikiMakeBulletedPoint()<CR>
 nnoremap <Leader>a :n ~/Downloads/Code/MyFiles/.config/nvim/init.vim<CR>:cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>c :cd ~/Downloads/Code/MyFiles/.config<CR>
 nnoremap <Leader>d :setlocal spell! spelllang=de_de<CR>
