@@ -18,7 +18,8 @@ riverctl map normal $mod+Shift Q close
 
 # Mod+E to exit river
 
-riverctl map normal $mod D wofi --show combi
+riverctl map normal $mod D wofi --show drun
+riverctl map normal $mod+Shift D wofi --show run
 
 # Mod+J and Mod+K to focus the next/previous view in the layout stack
 riverctl map normal $mod J focus-view next
