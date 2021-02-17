@@ -197,6 +197,13 @@ endfunction
 
 map <Leader><Leader> <Plug>(easymotion-prefix)
 
+" Vimwiki
+
+let wiki_1 = {}
+let wiki_1.path = '~/Downloads/vimwiki'
+let wiki_1.index = 'main'
+let g:vimwiki_list = [wiki_1]
+
 "
 " Second Settings
 "
