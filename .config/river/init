@@ -169,3 +169,9 @@ riverctl csd-filter-add "gedit"
 ponymix --card alsa_card.pci-0000_01_05.1 set-profile  output:hdmi-stereo &
 waybar  &
 yambar &
+
+
+
+riverctl focus-follows-corsor normal
+
+riverctl normal $mod+Shift+Ctrl L spawn waylock
