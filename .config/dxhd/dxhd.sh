@@ -76,7 +76,7 @@ rofi -show emoji -modi emoji
 rofi-autorandr {a, b}
 
 # super + shift + p
-PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
+ PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
 
 
 ## Scripts

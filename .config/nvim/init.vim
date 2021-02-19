@@ -100,6 +100,7 @@ autocmd BufWritePost *init.vim source ~/.config/nvim/init.vim
 autocmd BufWritePost *sh !shellcheck %
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh !dxhd -r
+autocmd BufWritePost *.tex !pdflatex %
 autocmd BufWritePre * %s/\s\+$//e
 autocmd Filetype markdown !pandoc -t ms -o %.pdf %
 autocmd Filetype sh !shellcheck %
