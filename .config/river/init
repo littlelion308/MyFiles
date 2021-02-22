@@ -172,6 +172,7 @@ yambar &
 
 
 
-riverctl focus-follows-corsor normal
+riverctl focus-follows-cursor normal
 
 riverctl map normal $mod+Shift+Control L spawn waylock
+
