@@ -176,3 +176,4 @@ riverctl focus-follows-cursor normal
 
 riverctl map normal $mod+Shift+Control L spawn waylock
 
+riverctl map normal $mod+Shift F spawn qutebrowser
