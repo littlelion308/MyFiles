@@ -23,11 +23,6 @@ syntax on
 " Functions
 "
 
-function VimwikiMakeBulletedPoint()
-	map ,qVimwikiMakePoint I- <Esc>
-	norm ,qVimwikiMakePoint
-endfunction
-
 function MarkdownMakeHeader()
 	map ,qMarkdownMakeHeader I#<Esc>
 	norm ,qMarkdownMakeHeader
@@ -134,8 +129,9 @@ call plug#begin()
 " Plug 'scrooloose/syntastic'
 " Plug 'vim/killersheep'
 
+
+
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
@@ -144,6 +140,7 @@ Plug 'junegunn/fzf.vim',
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'mattn/calendar-vim'
+Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
