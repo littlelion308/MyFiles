@@ -23,6 +23,9 @@ syntax on
 " Functions
 "
 
+function CountWords()
+	!wc "%"
+endfunction
 function MarkdownMakeHeader()
 	map ,qMarkdownMakeHeader I#<Esc>
 	norm ,qMarkdownMakeHeader
