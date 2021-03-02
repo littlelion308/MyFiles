@@ -52,6 +52,7 @@ command! WQ wq
 command! Wq wq
 command! Zprofile n ~/Downloads/Code/MyFiles/.zprofile
 command! Zshrc n ~/Downloads/Code/MyFiles/.zshrc
+command! WC call CountWords()
 
 "
 " Mappings
