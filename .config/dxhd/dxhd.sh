@@ -213,5 +213,5 @@ bspc node -p cancel
 bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 ## move a floating window
-# super + {Left,Down,Up,:ight}
+# super + {Left,Down,Up,right}
 bspc node -v {-20 0,0 20,0 -20,20 0}
