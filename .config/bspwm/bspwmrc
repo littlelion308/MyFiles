@@ -53,4 +53,4 @@ alacritty &
 # pasystray &
 # pa-applet &
 
-setxkbmap -option compose:sclk,compose:paus
+setxkbmap -option compose:caps
