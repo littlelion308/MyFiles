@@ -236,7 +236,7 @@ cursor-scroll = ns-resize
 
 [module/mydate]
 type = custom/script
-exec = date
+exec = date +"%a %b %d %T %Z %Y"
 tail = true
 format-underline = ${colors.module_Date}
 click-left = notify-send "" "The time is $(date)"
