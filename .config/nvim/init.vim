@@ -136,7 +136,7 @@ call plug#begin()
 
 
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'easymotion/vim-easymotion'
