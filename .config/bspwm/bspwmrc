@@ -33,7 +33,6 @@ bspc desktop -f '^1'
 
 # Ruls
 
-bspc rule -a Geary:geary desktop='^12'
 bspc rule -a Microsoft\ Teams\ -\ Preview:\* desktop='^12'
 bspc rule -a Zathura:org.pwmt.zathura state=tiled
 
