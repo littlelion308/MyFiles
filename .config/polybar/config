@@ -270,6 +270,8 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.module_Keyboard-Layout}
 
+click-left = ~/Downloads/Code/MyFiles/.local/bin/rofiKBswitcher.sh
+
 [module/filesystem]
 type = internal/fs
 interval = 25
