@@ -171,8 +171,8 @@ bspc node -t {tiled,floating,fullscreen}
 # super + {_,shift + }c
 bspc node -f {next,prev}.local
 
-# super + bracket{left,right}
-bspc desktop -f {prev,next}.local
+# super + {_,shift + }bracket{left,right}
+bspc {desktop -f,node -d} {prev,next}.local
 
 # super + {_,shift + }{1-9,0,minus,equal}
 bspc {desktop -f,node -d} '^{1-9,10,11,12}'
