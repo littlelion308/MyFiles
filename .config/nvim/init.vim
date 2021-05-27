@@ -83,7 +83,6 @@ noremap <C-l> <C-w>l
 vnoremap < <gv
 vnoremap > >gv
 vnoremap S :sort<CR>gv
-nnoremap gf :Vifm<CR>
 xnoremap J :move '<+1<CR>gv-gv
 xnoremap K :move '<-2<CR>gv-gv
 
