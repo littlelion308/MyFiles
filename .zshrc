@@ -153,5 +153,5 @@ PATH=$PATH:~/Downloads/Code/MyFiles/.local/bin/
 source ~/.zprofile
 
 
-ufetch
+pfetch
 
