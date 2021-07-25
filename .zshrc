@@ -51,7 +51,7 @@ alias ex='ex'
 alias fzf='find -type f | fzf'
 alias installdeb='instdeb'
 alias la='ls --color=auto -a'
-alias ll='ls --color=auto -la'
+alias ll='ls --color=auto -lah'
 alias ls="ls --color=always"
 alias nf='neofetch'
 alias nm='neomutt'
