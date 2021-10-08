@@ -24,6 +24,8 @@ export LESSHISTFILE="-"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+export CUPS_DATADIR="$XDG_DATA_HOME/cups"
+export CUPS_CACHEDIR="$XDG_DATA_HOME/cups"
 # export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 # $PATH=$PATH:~/.local/bin
 
