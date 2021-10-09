@@ -155,7 +155,7 @@ riverctl set-repeat 50 300
 
 # Set the layout on startup
 riverctl spawn rivertile
-riverctl output-layout rivertile
+riverctl default-layout rivertile
 
 # Set app-ids of views which should float
 riverctl float-filter-add "float"
