@@ -13,7 +13,7 @@ std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
 # This is THE bar configuration
 bar:
   height: 26
-  location: bottom
+  location: top
   spacing: 5
   margin: 7
 
@@ -31,41 +31,114 @@ bar:
 
   left:
 
-
-
-
     - river:
-        title: {string: { text: "                                          {seat} - {title}" }}
+        title:
+            string:
+                {text: "{seat} - {title}"}
         content:
-          map:
-            tag: state
-            values:
-                    "focused":
-                            string:
-                                    text: "{id}"
-                                    deco:
-                                        background:
-                                                color: ff0000ff
+          list:
+            items:
+    # - river:
+    #     content:
+              # map:
+              - map:
+                  # left-margin: 1
+                  tag: visible
+                  values:
+                    false:
+                      empty: {}
+                    true:
+                      string:
+                        text: "{id}"
+                        deco:
+                          underline:
+                            size: 1
+                            color: 00ffffcc
 
-                    "unfocused":
-                            string:
-                                    text: "{id}"
-                                    deco:
-                                        background:
-                                                color: ffff00ff
-                    "invisible":
-                            string:
-                                    text: "{id}"
-                                    deco:
-                                        background:
-                                                color: 0000ffff
+    # - river:
+    #     content:
+              # map:
+              - map:
+                  # left-margin: 1
+                  tag: focused
+                  values:
+                    false:
+                      empty: {}
+                    true:
+                      string:
+                        text: "{id}"
+                        deco:
+                          underline:
+                            size: 1
+                            color: ff000088
+
+    # - river:
+    #     content:
+              # map:
+              - map:
+                  # left-margin: 1
+                  tag: occupied
+                  values:
+                    false:
+                      empty: {}
+                    true:
+                      string:
+                        text: "{id}"
+                        deco:
+                          underline:
+                            size: 1
+                            color: ffffff88
+
+
+
+
+
+
+
+
+
+
+
+
+    #
+    # - river:
+    #     title: {string: { text: "                                          {seat} - {title}" }}
+    #     content:
+    #       map:
+    #         tag: state
+    #         values:
+                    # "focused":
+                    #         string:
+                    #                 text: "{id}"
+                                    # deco:
+                                    #     background:
+                                    #             color: ff0000ff
+
+                    # "unfocused":
+                    #         string:
+                    #                 text: "{id}"
+                                    # deco:
+                                    #     background:
+                                    #             color: ffff00ff
+                    # "invisible":
+                    #         string:
+                    #                 text: "{id}"
+                                    # deco:
+                                    #     background:
+                                    #             color: 0000ffff
+                    # "occupied":
+                    #         string:
+                    #                 text: "{id}"
+                                    # deco:
+                                    #     background:
+                                    #             color: ffff00ff
 
 
               # false: {empty: {}}
               # true:
-                # string:
-                  # margin: 5
-                  # text: "{id}: {state}"
+              #   string:
+              #     margin: 5
+              #     text: "{id}: {state}"
 
 
 
@@ -78,24 +151,28 @@ bar:
          #    tag: id
          #    default: {string: {text: , font: *awesome}}
          #    values:
-         #      1: {string: {text: , font: *awesome}}
-         #      2: {string: {text: , font: *awesome_brands}}
+              # 1: {string: {text: , font: *awesome}}
+              # 2: {string: {text: , font: *awesome_brands}}
 
       # content:
         # map:
          #  tag: state
          #  values:
-         #    focused:
-         #      map:
-         #        <<: *river_base
-         #        deco: {stack: [background: {color: ffa0a04c}, underline: {size: 2, color: ff0000ff}]}
-         #    unfocused: {map: {<<: *river_base}}
-         #    invisible:
-         #      map:
-         #        tag: occupied
-         #        values:
-         #          false: {empty: {}}
-         #          true: {map: {<<: *river_base, foreground: ffffff4c}}
+            # focused:
+            #   map:
+            #     <<: *river_base
+            #     deco: {stack: [background: {color: ffa0a04c}, underline: {size: 2, color: ff0000ff}]}
+            # unfocused: {map: {<<: *river_base}}
+            # invisible:
+            #   map:
+       # tag: occupied
+            #     values:
+            #       false: {empty: {}}
+            #       true: {map: {<<: *river_base, foreground: ffffff4c}}
+
+
+
+
       # title:
         # map:
          #  tag: title
@@ -110,12 +187,12 @@ bar:
 # content:
       #         map:
       #           tag: occupied
-      #              values:
-      #                false: {empty: {}}
-      #		        true:
-      #                     string:
-      #                        margin: 5
-      #                               text: "{id}: {state}"
+                    # values:
+                    #   false: {empty: {}}
+                    # true:
+                    #        string:
+                    #           margin: 5
+                    #                  text: "{id}: {state}"
 
   center:
           - clock:
