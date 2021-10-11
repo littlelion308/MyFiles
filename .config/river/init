@@ -183,3 +183,9 @@ riverctl focus-follows-cursor normal
 riverctl map normal $mod+Shift+Control L spawn waylock
 
 riverctl map normal $mod+Shift F spawn qutebrowser
+
+# start thing on the other monitor
+
+riverctl focus-output next
+
+yambar &
