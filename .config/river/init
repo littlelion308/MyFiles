@@ -18,7 +18,7 @@ riverctl map normal $mod+Shift Q close
 
 # Mod+E to exit river
 
-riverctl map normal $mod D spawn wofi --show drun
+riverctl map normal $mod D spawn "fuzzel -l=50"
 riverctl map normal $mod+Shift D spawn wofi --show run
 
 # Mod+J and Mod+K to focus the next/previous view in the layout stack
