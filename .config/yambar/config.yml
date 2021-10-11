@@ -30,7 +30,6 @@ bar:
     top-margin: 0
 
   left:
-
     - river:
         title:
             string:
@@ -38,11 +37,7 @@ bar:
         content:
           list:
             items:
-    # - river:
-    #     content:
-              # map:
               - map:
-                  # left-margin: 1
                   tag: visible
                   values:
                     false:
@@ -55,11 +50,7 @@ bar:
                             size: 1
                             color: 00ffffcc
 
-    # - river:
-    #     content:
-              # map:
               - map:
-                  # left-margin: 1
                   tag: focused
                   values:
                     false:
@@ -72,11 +63,7 @@ bar:
                             size: 1
                             color: ff000088
 
-    # - river:
-    #     content:
-              # map:
               - map:
-                  # left-margin: 1
                   tag: occupied
                   values:
                     false:
@@ -91,109 +78,6 @@ bar:
 
 
 
-
-
-
-
-
-
-
-
-
-    #
-    # - river:
-    #     title: {string: { text: "                                          {seat} - {title}" }}
-    #     content:
-    #       map:
-    #         tag: state
-    #         values:
-                    # "focused":
-                    #         string:
-                    #                 text: "{id}"
-                                    # deco:
-                                    #     background:
-                                    #             color: ff0000ff
-
-                    # "unfocused":
-                    #         string:
-                    #                 text: "{id}"
-                                    # deco:
-                                    #     background:
-                                    #             color: ffff00ff
-                    # "invisible":
-                    #         string:
-                    #                 text: "{id}"
-                                    # deco:
-                                    #     background:
-                                    #             color: 0000ffff
-                    # "occupied":
-                    #         string:
-                    #                 text: "{id}"
-                                    # deco:
-                                    #     background:
-                                    #             color: ffff00ff
-
-
-              # false: {empty: {}}
-              # true:
-              #   string:
-              #     margin: 5
-              #     text: "{id}: {state}"
-
-
-
-
-
-         # - river:
-     # anchors:
-        # - base: &river_base
-         #    margin: 5
-         #    tag: id
-         #    default: {string: {text: , font: *awesome}}
-         #    values:
-              # 1: {string: {text: , font: *awesome}}
-              # 2: {string: {text: , font: *awesome_brands}}
-
-      # content:
-        # map:
-         #  tag: state
-         #  values:
-            # focused:
-            #   map:
-            #     <<: *river_base
-            #     deco: {stack: [background: {color: ffa0a04c}, underline: {size: 2, color: ff0000ff}]}
-            # unfocused: {map: {<<: *river_base}}
-            # invisible:
-            #   map:
-       # tag: occupied
-            #     values:
-            #       false: {empty: {}}
-            #       true: {map: {<<: *river_base, foreground: ffffff4c}}
-
-
-
-
-      # title:
-        # map:
-         #  tag: title
-         #  default: {string: {text: "{title}", left-margin: 10}}
-         #  values: {"": {empty: {}}}
-
-
-
-
-      # - river:
-      #      title: {string: { text: "{seat} - {title}" }}
-# content:
-      #         map:
-      #           tag: occupied
-                    # values:
-                    #   false: {empty: {}}
-                    # true:
-                    #        string:
-                    #           margin: 5
-                    #                  text: "{id}: {state}"
-
   center:
           - clock:
                 content:
@@ -201,34 +85,21 @@ bar:
                     - string: {text: "{date}", right-margin: 5}
                     - string: {text: , font: "Font Awesome 5 Free:style=solid:size=12"}
                     - string: {text: "{time}"}
+
   right:
     - removables:
-        anchors:
-          drive: &drive { text: , font: *awesome}
-          optical: &optical {text: , font: *awesome}
-        spacing: 5
         content:
           map:
-            tag: mounted
+            tag: optical
             values:
-              false:
-                map:
-                  tag: optical
-                  on-click: udisksctl mount -b {device}
-                  values:
-                    false: [{string: *drive}, {string: {text: "{label}"}}]
-                    true: [{string: *optical}, {string: {text: "{label}"}}]
               true:
-                map:
-                  tag: optical
-                  on-click: udisksctl unmount -b {device}
-                  values:
-                    false:
-                      - string: {<<: *drive, deco: *std_underline}
-                      - string: {text: "{label}"}
-                    true:
-                      - string: {<<: *optical, deco: *std_underline}
-                      - string: {text: "{label}"}
+                string:
+                  text: " "
+                  font: *awesome
+              false:
+                string:
+                  text: " {device} {label}"
+
     - network:
         name: enp5s0
         content:
@@ -247,6 +118,7 @@ bar:
                         default: {string: {text: , font: *awesome}}
                         values:
                           "": {string: {text: , font: *awesome, foreground: ffffff66}}
+
     - network:
         name: wlp4s0
         content:
@@ -261,6 +133,7 @@ bar:
                   default: {string: {text: , font: *awesome}}
                   values:
                     "": {string: {text: , font: *awesome, foreground: ffffff66}}
+
     - clock:
         time-format: "%H:%M %Z"
         content:
@@ -268,6 +141,7 @@ bar:
           - string: {text: "{date}", right-margin: 5}
           - string: {text: , font: *awesome}
           - string: {text: "{time}"}
+
     - label:
         content:
           string:
