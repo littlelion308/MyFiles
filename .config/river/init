@@ -179,12 +179,13 @@ alacritty &
 
 
 riverctl focus-follows-cursor normal
-
 riverctl map normal $mod+Shift+Control L spawn waylock
-
 riverctl map normal $mod+Shift F spawn qutebrowser
 
+sleep 2s
+
 # start thing on the other monitor
+
 
 riverctl focus-output next
 
