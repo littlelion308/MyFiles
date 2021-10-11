@@ -186,7 +186,5 @@ sleep 2s
 
 # start thing on the other monitor
 
-
-riverctl focus-output next
-
-yambar &
+displays=$(wlr-randr | grep '"' |wc -l)
+[ "$displays" -ge 2 ]&&riverctl focus-output next && yambar &
