@@ -145,6 +145,6 @@ bar:
     - label:
         content:
           string:
-            on-click: loginctl poweroff
+            on-click: "lxsession-logout"
             text: 
             font: *awesome
