@@ -185,6 +185,7 @@ riverctl map normal $mod+Shift F spawn qutebrowser
 riverctl map normal $mod backslash spawn "alacritty -e htop"
 riverctl map normal $mod apostrophe spawn "alacritty -e vi"
 riverctl map normal $mod semicolon spawn "alacritty -e vifm"
+riverctl map normal $mod p spawn "cpassmenu"
 
 sleep 2s
 
