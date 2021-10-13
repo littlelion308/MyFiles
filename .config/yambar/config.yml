@@ -135,7 +135,8 @@ bar:
                     "": {string: {text: , font: *awesome, foreground: ffffff66}}
 
     - clock:
-        time-format: "%H:%M %Z"
+        time-format: "%T %Z"
+        date-format: "%a %b %d %Y"
         content:
           - string: {text: , font: *awesome}
           - string: {text: "{date}", right-margin: 5}
