@@ -37,6 +37,8 @@ bar:
         content:
           list:
             items:
+              - string:
+                  text: " "
               - map:
                   tag: visible
                   values:
@@ -49,7 +51,8 @@ bar:
                           underline:
                             size: 1
                             color: 00ffffcc
-
+              - string:
+                  text: " "
               - map:
                   tag: focused
                   values:
@@ -63,6 +66,8 @@ bar:
                             size: 1
                             color: ff000088
 
+              - string:
+                  text: " "
               - map:
                   tag: occupied
                   values:
