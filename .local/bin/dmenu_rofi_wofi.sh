@@ -2,4 +2,5 @@
 
 [ -n "$WAYLAND_DISPLAY" ] 			&& wofi -d ||
 [ -n "$DISPLAY" ] 	  			&& rofi -dmenu ||
-[ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] 	&& fzfmenu
+# [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] 	&& fzfmenu
+grep '' ''
