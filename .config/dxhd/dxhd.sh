@@ -101,25 +101,25 @@ rofi-autorandr {a, b}
 qutebrowser
 
 # super + shift + Up
-pulseaudio-ctl up
+ponymix increase 5
 
 # super + shift + Down
-pulseaudio-ctl down
+ponymix decrease 5
 
 # super + shift + Right
-pulseaudio-ctl mute
+ponymix toggle
 
 # super + shift + Left
-pulseaudio-ctl mute
+ponymix toggle
 
 # XF86AudioRaiseVolume
-pulseaudio-ctl up
+ponymix increase 5
 
 # XF86AudioLowerVolume
-pulseaudio-ctl down
+ponymix decrease 5
 
 # XF86AudioMute
-pulseaudio-ctl mute
+ponymix toggle
 
 # {super + w, Print}
 flameshot {gui, gui}
