@@ -171,6 +171,8 @@ riverctl csd-filter-add "gedit"
 ### 	My programs
 ###
 
+ponymix -d alsa_input.usb-Logitech_Logitech_USB_Headset_000000000000-00.mono-fallback set-default &
+ponymix -d alsa_output.usb-Logitech_Logitech_USB_Headset_000000000000-00.analog-stereo set-default &
 ponymix --card alsa_card.pci-0000_01_05.1 set-profile  output:hdmi-stereo &
 waybar  &
 yambar &
