@@ -196,3 +196,4 @@ sleep 2s
 
 displays=$(wlr-randr | grep '"' |wc -l)
 [ "$displays" -ge 2 ]&&riverctl focus-output next && yambar &
+wlr-randr --output HDMI-A-1 --pos 0,0 --output LVDS-1 --pos 1920,312
