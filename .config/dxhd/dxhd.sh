@@ -50,6 +50,8 @@ alacritty -t Neomutt -e neomutt
 # super + shift + backslash
 alacritty -t Calcurse -e calcurse
 
+# super + shift + ctrl + s
+shutdown 0
 
 ## Launchers
 
