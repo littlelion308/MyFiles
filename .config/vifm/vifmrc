@@ -506,4 +506,4 @@ nnoremap gi :!dragon-drop -t <CR>
 " map gi :!dragon-drop -tk %d <CR>
 nnoremap gn :mkdir RnameMeWithcw <CR>
 nnoremap gN :touch RnameMeWithcw.txt <CR>
-
+nnoremap gm :move<cr>
