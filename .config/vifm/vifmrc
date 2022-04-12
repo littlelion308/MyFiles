@@ -498,11 +498,12 @@ command C Copy
 command R rename
 filetype *.zip unzip %c
 
-map go :!dragon-drop -x %f <CR>
-map gO :!dragon-drop -k %f <CR>
-map gp :!dragon-drop -ax %f <CR>
-map gP :!dragon-drop -ak %f <CR>
-map gi :!dragon-drop -t <CR>
+nnoremap go :!dragon-drop -x %f <CR>
+nnoremap gO :!dragon-drop -k %f <CR>
+nnoremap gp :!dragon-drop -ax %f <CR>
+nnoremap gP :!dragon-drop -ak %f <CR>
+nnoremap gi :!dragon-drop -t <CR>
 " map gi :!dragon-drop -tk %d <CR>
-nmap gn :mkdir RnameMeWithcw <CR>
-nmap gN :touch RnameMeWithcw.txt <CR>
+nnoremap gn :mkdir RnameMeWithcw <CR>
+nnoremap gN :touch RnameMeWithcw.txt <CR>
+
