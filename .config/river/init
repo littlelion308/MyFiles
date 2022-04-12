@@ -7,6 +7,9 @@
 #
 # See the riverctl(1) man page for complete documentation
 
+# Compose Key
+XKB_DEFAULT_VARIANT=caps:compose
+
 # Use the "logo" key as the primary modifier
 [ "$XDG_SESSION_TYPE" = "x11" ] && mod="Mod1" || mod="Mod4"
 
