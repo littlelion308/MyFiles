@@ -1,5 +1,6 @@
 configuration {
-	modi: [ windowcd, window, run, ssh, drun, combi, keys, calc, emoji];
+	modi: "window,windowcd,run,ssh,drun,combi,keys,calc,emoji";
+	/* modi: [ windowcd, window, run, ssh, drun, combi, keys, calc, emoji]; */
 	/* modi: [ windowcd, window, run, ssh, drun, combi, keys, clip:greenclip]; */
 	width: 90;
 	lines: 30;
