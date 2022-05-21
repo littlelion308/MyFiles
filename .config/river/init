@@ -193,6 +193,17 @@ riverctl map normal $mod apostrophe spawn "alacritty -e vi"
 riverctl map normal $mod semicolon spawn "alacritty -e vifm"
 riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
 
+
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad click-method clickfinger
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad drag enabled
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad middle-emulation enabled
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad natural-scroll disabled
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad tap enabled
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad tap-button-map left-right-middle
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad scroll-method two-finger
+
+
+
 sleep 2s
 
 # start thing on the other monitor
