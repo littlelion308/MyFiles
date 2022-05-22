@@ -192,6 +192,8 @@ riverctl map normal $mod backslash spawn "alacritty -e htop"
 riverctl map normal $mod apostrophe spawn "alacritty -e vi"
 riverctl map normal $mod semicolon spawn "alacritty -e vifm"
 riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
+riverctl map normal None Print spawn "wayland-screenshot"
+riverctl map normal $mod W spawn "wayland-screenshot"
 
 
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad click-method clickfinger
