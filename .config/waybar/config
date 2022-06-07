@@ -33,7 +33,7 @@
 	"num-tags": 9
     },
     "river/window": {
-	"format": "{}",
+	"format": " {}",
 	"max-length": 50,
 	"tooltip": true
     },
