@@ -42,7 +42,7 @@ riverctl map normal $mod+Shift period send-to-output next
 riverctl map normal $mod+Shift comma send-to-output previous
 
 # Mod+Return to bump the focused view to the top of the layout stack
-riverctl map normal $mod+Ctrl Return zoom
+riverctl map normal $mod+Control Return zoom
 
 # Mod+H and Mod+L to decrease/increase the main factor by 5%
 # If using rivertile(1) this determines the width of the main stack.
@@ -194,6 +194,7 @@ riverctl map normal $mod semicolon spawn "alacritty -e vifm"
 riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
 riverctl map normal None Print spawn "wayland-screenshot"
 riverctl map normal $mod W spawn "wayland-screenshot"
+riverctl map normal $mod+Shift P spawn "playerctl play-pause"
 
 
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad click-method clickfinger
