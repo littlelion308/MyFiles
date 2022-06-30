@@ -13,9 +13,6 @@ XKB_DEFAULT_VARIANT=caps:compose
 # Use the "logo" key as the primary modifier
 [ "$XDG_SESSION_TYPE" = "x11" ] && mod="Mod1" || mod="Mod4"
 
-# Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal $mod Return spawn alacritty
-
 # Mod+Q to close the focused view
 riverctl map normal $mod+Shift Q close
 
@@ -83,16 +80,16 @@ do
     tags=$((1 << ($i - 1)))
 
     # Mod+[1-9] to focus tag [0-8]
-    riverctl map normal $mod $i set-focused-tags $tags
+    riverctl map normal $mod "$i" set-focused-tags $tags
 
     # Mod+Shift+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal $mod+Shift $i set-view-tags $tags
+    riverctl map normal $mod+Shift "$i" set-view-tags $tags
 
     # Mod+Shift+Ctrl+[1-9] to toggle tag [0-8] of focused view
-    riverctl map normal $mod+Shift+Control $i toggle-focused-tags $tags
+    riverctl map normal $mod+Shift+Control "$i" toggle-focused-tags $tags
 
     # Mod+Ctrl+[1-9] to toggle focus of tag [0-8]
-    riverctl map normal $mod+Control $i toggle-view-tags $tags
+    riverctl map normal $mod+Control "$i" toggle-view-tags $tags
 done
 
 # Mod+0 to focus all tags
@@ -186,16 +183,26 @@ riverctl focus-follows-cursor normal
 riverctl float-filter-add title lxsession-logout
 
 
-riverctl map normal $mod+Shift+Control L spawn "waylock --init-color \#000000"
-riverctl map normal $mod+Shift F spawn qutebrowser
-riverctl map normal $mod backslash spawn "alacritty -e htop"
-riverctl map normal $mod apostrophe spawn "alacritty -e vi"
-riverctl map normal $mod semicolon spawn "alacritty -e vifm"
-riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
-riverctl map normal None Print spawn "wayland-screenshot"
-riverctl map normal $mod W spawn "wayland-screenshot"
-riverctl map normal $mod+Shift P spawn "playerctl play-pause"
+##################################
+### Application lauch bindings ###
+##################################
 
+# Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
+riverctl map normal $mod Return spawn alacritty
+
+riverctl map normal $mod W spawn "wayland-screenshot"
+riverctl map normal $mod apostrophe spawn "alacritty -e vi"
+riverctl map normal $mod backslash spawn "alacritty -e htop"
+riverctl map normal $mod semicolon spawn "alacritty -e vifm"
+riverctl map normal $mod+Shift F spawn qutebrowser
+riverctl map normal $mod+Shift P spawn "playerctl play-pause"
+riverctl map normal $mod+Shift+Control L spawn "waylock --init-color \#000000"
+riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
+riverctl map normal $mod+Control P spawn "PASSWORD_STORE_DIR='$XDG_DATA_HOME/pass' passmenu"
+riverctl map normal None Print spawn "wayland-screenshot"
+
+
+## Touchpad configuration ##
 
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad click-method clickfinger
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad drag enabled
@@ -211,7 +218,7 @@ sleep 2s
 
 # start thing on the other monitor
 
-displays=$(wlr-randr | grep '"' |wc -l)
+displays=$(wlr-randr | grep -c '"')
 [ "$displays" -ge 2 ]&&
 	riverctl focus-output next &&
 	# yambar &
