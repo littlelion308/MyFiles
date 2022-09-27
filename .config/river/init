@@ -18,8 +18,8 @@ riverctl map normal $mod+Shift Q close
 
 # Mod+E to exit river
 
-riverctl map normal $mod D spawn "wofi -i --show drun"
-riverctl map normal $mod+Shift D spawn "wofi -i --show run"
+riverctl map normal $mod D spawn "tofi-drun"
+riverctl map normal $mod+Shift D spawn "tofi-run"
 
 # Mod+J and Mod+K to focus the next/previous view in the layout stack
 riverctl map normal $mod J focus-view next
