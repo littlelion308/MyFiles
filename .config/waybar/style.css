@@ -65,7 +65,10 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock,
+#clock {
+ color: #ffffff;
+ padding: 0 5px
+},
 #battery,
 #cpu,
 #memory,
