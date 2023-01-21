@@ -13,6 +13,12 @@ case $action in
 	logoutmenu)
 		lxsession-logout
 		;;
+	sleep)
+		systemctl suspend
+		;;
+	hybrib-sleep)
+		systemctl hybrib-sleep
+		;;
 	cancel)
 		exit 0
 		;;
