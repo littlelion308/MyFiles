@@ -196,7 +196,8 @@ riverctl float-filter-add title lxsession-logout
 ##################################
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal $mod Return spawn alacritty
+riverctl map normal $mod Return spawn foot
+riverctl map normal $mod+Shift Return spawn alacritty
 
 riverctl map normal $mod W spawn "wayland-screenshot"
 riverctl map normal $mod apostrophe spawn "alacritty -e vi"
