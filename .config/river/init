@@ -179,7 +179,7 @@ ponymix --card alsa_card.pci-0000_01_05.1 set-profile  output:hdmi-stereo &
 # Bars
 waybar  &
 # yambar &
-alacritty &
+foot &
 # Deamons
 dunst &
 greenclip daemon&
@@ -200,9 +200,9 @@ riverctl map normal $mod Return spawn foot
 riverctl map normal $mod+Shift Return spawn alacritty
 
 riverctl map normal $mod W spawn "wayland-screenshot"
-riverctl map normal $mod apostrophe spawn "alacritty -e vi"
-riverctl map normal $mod backslash spawn "alacritty -e htop"
-riverctl map normal $mod semicolon spawn "alacritty -e vifm"
+riverctl map normal $mod apostrophe spawn "foot vi"
+riverctl map normal $mod backslash spawn "foot htop"
+riverctl map normal $mod semicolon spawn "foot vifm"
 riverctl map normal $mod+Shift F spawn qutebrowser
 riverctl map normal $mod+Shift P spawn "playerctl play-pause"
 riverctl map normal $mod+Shift+Control L spawn "swaylock -lkKc \#000000"
