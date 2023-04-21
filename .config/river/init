@@ -211,6 +211,15 @@ riverctl map normal $mod+Control P spawn "PASSWORD_STORE_DIR='$XDG_DATA_HOME/pas
 riverctl map normal None Print spawn "wayland-screenshot"
 
 
+#### Input Configuration ####
+
+riverctl keyboard-layout -options compose:caps,shift:both_capslock us
+
+# Doen't seam to work
+riverctl keyboard-group-create normal
+riverctl keyboard-group-add normal 113-49948-Logitech_USB_Keyboard
+riverctl keyboard-group-add normal 1-1-AT_Translated_Set_2_Keyboard
+
 ## Touchpad configuration ##
 
 riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad click-method clickfinger
