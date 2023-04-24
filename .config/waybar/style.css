@@ -68,7 +68,7 @@ window#waybar.chromium {
 #clock {
  color: #ffffff;
  padding: 0 5px
-},
+}
 #battery,
 #cpu,
 #memory,
