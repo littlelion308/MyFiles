@@ -1,5 +1,5 @@
 #!/bin/sh
-action=$(printf "quit\\nshutdown\\nreboot\\nlogoutmenu\\ncancel" | rofi -dmenu)
+action=$(printf "quit\\nshutdown\\nreboot\\nlogoutmenu\\ncancel" | dmenu)
 case $action in
 	quit )
 		bspc quit

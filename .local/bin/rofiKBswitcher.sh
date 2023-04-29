@@ -1,5 +1,5 @@
 #!/bin/sh
-action=$(printf "adNeo\\nNeo\\nqwerty\\nqwertz\\ncancel" | rofi -dmenu)
+action=$(printf "adNeo\\nNeo\\nqwerty\\nqwertz\\ncancel" | dmenu)
 case $action in
 	qwerty)
 		setxkbmap en_US
