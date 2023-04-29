@@ -203,11 +203,13 @@ riverctl map normal $mod W spawn "wayland-screenshot"
 riverctl map normal $mod apostrophe spawn "foot vi"
 riverctl map normal $mod backslash spawn "foot htop"
 riverctl map normal $mod semicolon spawn "foot vifm"
+riverctl map normal $mod+Control P spawn "PASSWORD_STORE_DIR='$XDG_DATA_HOME/pass' passmenu"
 riverctl map normal $mod+Shift F spawn qutebrowser
+riverctl map normal $mod+Shift L spawn "~/Downloads/Code/MyFiles/.local/bin/rofishutdown.sh"
 riverctl map normal $mod+Shift P spawn "playerctl play-pause"
 riverctl map normal $mod+Shift+Control L spawn "swaylock -lkKc \#000000"
 riverctl map normal $mod+Shift+Control S spawn "shutdown 0"
-riverctl map normal $mod+Control P spawn "PASSWORD_STORE_DIR='$XDG_DATA_HOME/pass' passmenu"
+riverctl map normal $mod+Shift+Control+Alt L spawn "swaylock -lkKc \#000000 & systemctl hybrid-sleep"
 riverctl map normal None Print spawn "wayland-screenshot"
 
 
