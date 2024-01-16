@@ -30,22 +30,26 @@
 	//     }
 	// },
 	"river/tags": {
-	"num-tags": 9
+		"num-tags": 9
 	},
 	"river/window": {
-	"format": " {}",
-	"max-length": 50,
-	"tooltip": true
+		"format": " {}",
+		"max-length": 50,
+		"tooltip": true
 	},
 	"wlr/workspaces": {
-	     "format": "{icon}",
-	     "on-scroll-up": "hyprctl dispatch workspace e+1",
-	     "on-scroll-down": "hyprctl dispatch workspace e-1"
+		"format": "{icon}",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
 		"on-scroll-down": "hyprctl dispatch workspace e-1"
+	 },
+	 "hyprland/window": {
+		"format": "{title}",
+		"separate-outputs": true
 	 },
 
 
