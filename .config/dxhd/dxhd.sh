@@ -1,183 +1,32 @@
 #!/bin/sh
-
-# super + shift + ctrl + alt + q + w + e r + t + y + u + i + o + p + a
-echo "You pressed a Lot of Keys"
-
-## mouse1
-##alacritty
-## dxhd -c ~/.config/dxhd/dxhd-programs.sh
-## dxhd -c ~/.config/dxhd/dxhd-bspc.sh
-
-## $TERM -t Vifm -e vifm
-GenericTermName=Terminal
-LAUNCHER=rofi
-
-###
-### wm independent hotkeys
-###
-
-## TERMINALS
-
-# super + Return
-alacritty -t Terminal
-
-# super + KP_Enter
-alacritty -t Terminal
-
-# super + shift + Return
-st
-
-# super + shift + KP_Enter
-st
+#########################
+## New write ############
+## Windowmanager ########
+#########################
 
 
-# super + semicolon
-alacritty -t Vifm -e vifm
-
-# super + apostrophe
-alacritty -t NVim -e nvim
-
-# super + backslash
-rofi -show calc -modi calc -no-show-match -no-sort
-
-
-# super + shift + semicolon
-alacritty -t Htop -e htop
-
-# super + shift + apostrophe
-alacritty -t Neomutt -e neomutt
-
-# super + shift + backslash
-alacritty -t Calcurse -e calcurse
-
-# super + shift + ctrl + s
-shutdown 0
-
-## Launchers
-
-
-# super + d
-rofi -show combi
-
-# super + shift + d
-rofi -show run
-
-# super + Tab
-rofi -show window
-
-# super + shift + Tab
-rofi -show windowcd
-
-# super + shift + c
-rofi -modi "clip:greenclip print" -show clip -run-command '{cmd}'
-
-# super + i
-rofi -show emoji -modi emoji
-
-# {super + p, XF86Display}
-rofi-autorandr {a, b}
-
-# super + shift + p
- PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
-
-
-## Scripts
-
-
-# super + a
-~/Downloads/Code/MyFiles/.local/bin/greenclear.sh
-
-
-# super + shift + {e,s}
-~/Downloads/Code/MyFiles/.local/bin/rofishutdown.sh {a, b}
-
-
-# super + o
-~/.local/bin/shower.sh
-
-
-## Various programs
-
-
-# super + shift + f
-qutebrowser
-
-# super + shift + Up
-ponymix increase 5
-
-# super + shift + Down
-ponymix decrease 5
-
-# super + shift + Right
-ponymix toggle
-
-# super + shift + Left
-ponymix toggle
-
-# XF86AudioRaiseVolume
-ponymix increase 5
-
-# XF86AudioLowerVolume
-ponymix decrease 5
-
-# XF86AudioMute
-ponymix toggle
-
-# {super + w, Print}
-flameshot {gui, gui}
-
-# super + z
-zathura
-
-# super + shift + ctrl + l
-xsecurelock
-
+## Kill window
 # super + shift + {_, ctrl +} q
 xdo {close, kill}
-
-# super + shift + ctrl + k
-~/Downloads/Code/MyFiles/.local/bin/rofiKBswitcher.sh
-
-# super + ctrl + alt + {h,j,k,l} + {_,shift}
-xdotool mousemove_relative -p {270,180,0,90} {10,75}
-
-# super + {q,e,t,r}
-xdotool click {1,3,4,5}
-
-# super + shift + m
-mpv --player-operation-mode=pseudo-gui
-
-###
-### Bspwm Hotkeys
-###
-
-
-# super + shift + mouse1
-bspc node -t floating
-
-# super + ctrl + shift + {e,s}
-{ bspc quit, shutdown 0}
-
-# super + m
-bspc desktop -l next
-
+## Foucus and move
 # super + {_,shift + }{h,j,k,l}
 bspc node -{f, s} '{west,south,north,east}'
-
-# super + shift + {h,j,k,l}
-bspc node -s '{west,south,north,east}'
-
+## cyclic focus
+# super + {_,shift + }c
+bspc node -f {next,prev}.local
+## switch and move between desktops
+# super + {_,shift + }{1-9,0,minus,equal}
+bspc {desktop -f,node -d} '^{1-9,10,11,12}'
+## toggel tiled, floating, fullscreen
 # super + {t,shift + space,f}
 bspc node -t {tiled,floating,fullscreen}
 
-# super + {_,shift + }c
-bspc node -f {next,prev}.local
+### Unused, but Useful Things
+# super + m
+bspc desktop -l next
 
 # super + {_,shift + }bracket{left,right}
 bspc {desktop -f,node -d} {prev,next}.local
-
-# super + {_,shift + }{1-9,0,minus,equal}
-bspc {desktop -f,node -d} '^{1-9,10,11,12}'
 
 ## expand a window by moving one of its side outward
 # super + alt + {h,j,k,l}
@@ -186,11 +35,6 @@ bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 ## contract a window by moving one of its side inward
 # super + alt + shift + {h,j,k,l}
 bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-
-##
-### Unused, but Useful Things
-##
 
 # super + y
 bspc node focused -n newest.!automatic.local
@@ -217,3 +61,49 @@ bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 ## move a floating window
 # super + {Left,Down,Up,right}
 bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+### WM independent
+
+# super + d
+rofi -show combi
+# {super + w, Print}
+flameshot {gui, gui}
+# super + shift + d
+rofi -show run
+# super + Return
+alacritty -t Terminal
+# super + KP_Enter
+alacritty -t Terminal
+# super + apostrophe
+alacritty -t NVim -e vi
+# super + semicolon
+alacritty -t Htop -e htop
+# super + semicolon
+alacritty -t Vifm -e vifm
+# super + shift + f
+qutebrowser
+# super + shift + ctrl + l
+xsecurelock
+# super + shift + +ctrl + alt + l
+dash -c 'xsecurelock & systemctl hyrid-sleep'
+# super + shift + ctrl + s
+shutdown 0
+# super + shift + p
+ PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass" passmenu
+
+## "Locked Mode"
+# super + shift + Up
+pamixer -i 5
+# super + shift + Down
+pamixer -d 5
+# super + shift + Right
+pamixer --toggle-mute
+# super + shift + Left
+pamixer --toggle-mute
+# XF86AudioRaiseVolume
+pamixer -i 5
+# XF86AudioLowerVolume
+pamixer -d 5
+# XF86AudioMute
+pamixer --toggle-mute
