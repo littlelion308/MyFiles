@@ -36,14 +36,7 @@ endfunction
 "
 
 command! Addressbook n ~/.local/share/abook/addressbook
-command! Bspwmrc n ~/Downloads/Code/MyFiles/.config/bspwm/bspwmrc
-command! Dunstrc n ~/Downloads/Code/MyFiles/.config/dunst/dunstrc
-command! Dxhd n ~/Downloads/Code/MyFiles/.config/dxhd/dxhd.sh
-command! Muttrc n ~/Downloads/Code/MyFiles/.config/mutt/muttrc
-command! Polybarconfig n ~/Downloads/Code/MyFiles/.config/polybar/config
 command! Q q
-command! Rofirc n ~/Downloads/Code/MyFiles/.config/rofi/config.rasi
-command! Sxhkdrc n ~/Downloads/Code/MyFiles/.config/sxhkd/sxhkdrc
 command! Vf Vifm
 command! Vifmrc n ~/Downloads/Code/MyFiles/.config/vifm/vifmrc
 command! Vimrc n ~/Downloads/Code/MyFiles/.config/nvim/init.vim
