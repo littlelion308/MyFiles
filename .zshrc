@@ -65,13 +65,6 @@ alias pm='pulsemixer'
 alias printstatus='while true; do; date; lpstat -l; sleep 1; done'
 
 #
-#    Plugins
-#
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/doc/find-the-command/ftc.zsh
-
-#
 #   Settings
 #
 
@@ -154,5 +147,4 @@ PATH=$PATH:~/Downloads/Code/MyFiles/.local/bin/
 source ~/.zprofile
 
 
-pfetch
 
