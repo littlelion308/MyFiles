@@ -150,6 +150,7 @@ call plug#end()
 
 set nocompatible
 
+" use TAB to navigate between etries in Competion Tables
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ "\<TAB>"
